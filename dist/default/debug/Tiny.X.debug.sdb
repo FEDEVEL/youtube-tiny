@@ -3,20 +3,6 @@
 [d edition pro ]
 [d chip 16LF1829 ]
 [d frameptr 6 ]
-"34 D:\Users\Robo\work\MPLAB\tiny\Tiny.X\mcc_generated_files/drivers/i2c_simple_master.c
-[e E360 . `uc
-I2C1_STOP 1
-I2C1_RESTART_READ 2
-I2C1_RESTART_WRITE 3
-I2C1_CONTINUE 4
-I2C1_RESET_LINK 5
-]
-"53
-[e E355 . `uc
-I2C1_NOERR 0
-I2C1_BUSY 1
-I2C1_FAIL 2
-]
 "67 D:\Users\Robo\work\MPLAB\tiny\Tiny.X\mcc_generated_files/examples/i2c1_master_example.c
 [e E355 . `uc
 I2C1_NOERR 0
@@ -72,10 +58,6 @@ I2C1_DATA_NACK 3
 I2C1_TIMEOUT 4
 I2C1_NULL 5
 ]
-"5 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\awmod.c
-[v ___awmod __awmod `(i  1 e 2 0 ]
-"5 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\printf.c
-[v _printf printf `(i  1 e 2 0 ]
 "10 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
 "4 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\Umul8_16.c
@@ -84,26 +66,16 @@ I2C1_NULL 5
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"48 D:\Users\Robo\work\MPLAB\tiny\Tiny.X\main.c
+"57 D:\Users\Robo\work\MPLAB\tiny\Tiny.X\main.c
 [v _main main `(v  1 e 1 0 ]
+"190
+[v _WakeUpInterrupt WakeUpInterrupt `(v  1 e 1 0 ]
+"195
+[v _ButtonInterrupt ButtonInterrupt `(v  1 e 1 0 ]
 "38 D:\Users\Robo\work\MPLAB\tiny\Tiny.X\mcc_generated_files/delay.c
 [v _DELAY_milliseconds DELAY_milliseconds `(v  1 e 1 0 ]
 "49
 [v _DELAY_microseconds DELAY_microseconds `(v  1 e 1 0 ]
-"34 D:\Users\Robo\work\MPLAB\tiny\Tiny.X\mcc_generated_files/drivers/i2c_simple_master.c
-[v _wr1RegCompleteHandler wr1RegCompleteHandler `(E360  1 s 1 wr1RegCompleteHandler ]
-"71
-[v _i2c_writeNBytes i2c_writeNBytes `(v  1 e 1 0 ]
-"81
-[v _rd1RegCompleteHandler rd1RegCompleteHandler `(E360  1 s 1 rd1RegCompleteHandler ]
-"119
-[v _rd2RegCompleteHandler rd2RegCompleteHandler `(E360  1 s 1 rd2RegCompleteHandler ]
-"151
-[v _wr2RegCompleteHandler wr2RegCompleteHandler `(E360  1 s 1 wr2RegCompleteHandler ]
-"185
-[v _rdBlkRegCompleteHandler rdBlkRegCompleteHandler `(E360  1 s 1 rdBlkRegCompleteHandler ]
-"228
-[v _i2c_readNBytes i2c_readNBytes `(v  1 e 1 0 ]
 "64 D:\Users\Robo\work\MPLAB\tiny\Tiny.X\mcc_generated_files/epwm1.c
 [v _EPWM1_Initialize EPWM1_Initialize `(v  1 e 1 0 ]
 "90
@@ -112,16 +84,21 @@ I2C1_NULL 5
 [v _EPWM2_Initialize EPWM2_Initialize `(v  1 e 1 0 ]
 "90
 [v _EPWM2_LoadDutyValue EPWM2_LoadDutyValue `(v  1 e 1 0 ]
-"142 D:\Users\Robo\work\MPLAB\tiny\Tiny.X\mcc_generated_files/examples/i2c1_master_example.c
-[v _rd1RegCompleteHandler@i2c1_master_example$F183 rd1RegCompleteHandler `(E360  1 s 1 rd1RegCompleteHandler ]
+[v i1_EPWM2_LoadDutyValue EPWM2_LoadDutyValue `(v  1 e 1 0 ]
+"63 D:\Users\Robo\work\MPLAB\tiny\Tiny.X\mcc_generated_files/examples/i2c1_master_example.c
+[v _I2C1_Read1ByteRegister I2C1_Read1ByteRegister `(uc  1 e 1 0 ]
+"91
+[v _I2C1_Write1ByteRegister I2C1_Write1ByteRegister `(v  1 e 1 0 ]
+"142
+[v _rd1RegCompleteHandler rd1RegCompleteHandler `(E360  1 s 1 rd1RegCompleteHandler ]
 "149
-[v _rd2RegCompleteHandler@i2c1_master_example$F194 rd2RegCompleteHandler `(E360  1 s 1 rd2RegCompleteHandler ]
+[v _rd2RegCompleteHandler rd2RegCompleteHandler `(E360  1 s 1 rd2RegCompleteHandler ]
 "156
-[v _wr1RegCompleteHandler@i2c1_master_example$F200 wr1RegCompleteHandler `(E360  1 s 1 wr1RegCompleteHandler ]
+[v _wr1RegCompleteHandler wr1RegCompleteHandler `(E360  1 s 1 wr1RegCompleteHandler ]
 "163
-[v _wr2RegCompleteHandler@i2c1_master_example$F206 wr2RegCompleteHandler `(E360  1 s 1 wr2RegCompleteHandler ]
+[v _wr2RegCompleteHandler wr2RegCompleteHandler `(E360  1 s 1 wr2RegCompleteHandler ]
 "170
-[v _rdBlkRegCompleteHandler@i2c1_master_example$F217 rdBlkRegCompleteHandler `(E360  1 s 1 rdBlkRegCompleteHandler ]
+[v _rdBlkRegCompleteHandler rdBlkRegCompleteHandler `(E360  1 s 1 rdBlkRegCompleteHandler ]
 "32 D:\Users\Robo\work\MPLAB\tiny\Tiny.X\mcc_generated_files/ext_int.c
 [v _INT_ISR INT_ISR `(v  1 e 1 0 ]
 "41
@@ -258,7 +235,7 @@ I2C1_NULL 5
 [v _PWM4_LoadDutyValue PWM4_LoadDutyValue `(v  1 e 1 0 ]
 "62 D:\Users\Robo\work\MPLAB\tiny\Tiny.X\mcc_generated_files/tmr2.c
 [v _TMR2_Initialize TMR2_Initialize `(v  1 e 1 0 ]
-[s S282 . 1 `uc 1 IOCIF 1 0 :1:0 
+[s S179 . 1 `uc 1 IOCIF 1 0 :1:0 
 `uc 1 INTF 1 0 :1:1 
 `uc 1 TMR0IF 1 0 :1:2 
 `uc 1 IOCIE 1 0 :1:3 
@@ -267,15 +244,15 @@ I2C1_NULL 5
 `uc 1 PEIE 1 0 :1:6 
 `uc 1 GIE 1 0 :1:7 
 ]
-"374 C:/Users/robotp/.mchp_packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1829.h
-[s S291 . 1 `uc 1 . 1 0 :2:0 
+"374 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1829.h
+[s S188 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 T0IF 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 T0IE 1 0 :1:5 
 ]
-[u S296 . 1 `S282 1 . 1 0 `S291 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES296  1 e 1 @11 ]
-[s S869 . 1 `uc 1 TMR1IF 1 0 :1:0 
+[u S193 . 1 `S179 1 . 1 0 `S188 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES193  1 e 1 @11 ]
+[s S519 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 CCP1IF 1 0 :1:2 
 `uc 1 SSP1IF 1 0 :1:3 
@@ -285,9 +262,9 @@ I2C1_NULL 5
 `uc 1 TMR1GIF 1 0 :1:7 
 ]
 "597
-[u S878 . 1 `S869 1 . 1 0 ]
-[v _PIR1bits PIR1bits `VES878  1 e 1 @17 ]
-[s S808 . 1 `uc 1 CCP2IF 1 0 :1:0 
+[u S528 . 1 `S519 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES528  1 e 1 @17 ]
+[s S1081 . 1 `uc 1 CCP2IF 1 0 :1:0 
 `uc 1 . 1 0 :2:1 
 `uc 1 BCL1IF 1 0 :1:3 
 `uc 1 EEIF 1 0 :1:4 
@@ -296,15 +273,15 @@ I2C1_NULL 5
 `uc 1 OSFIF 1 0 :1:7 
 ]
 "658
-[u S816 . 1 `S808 1 . 1 0 ]
-[v _PIR2bits PIR2bits `VES816  1 e 1 @18 ]
+[u S1089 . 1 `S1081 1 . 1 0 ]
+[v _PIR2bits PIR2bits `VES1089  1 e 1 @18 ]
 "968
 [v _TMR2 TMR2 `VEuc  1 e 1 @26 ]
 "988
 [v _PR2 PR2 `VEuc  1 e 1 @27 ]
 "1008
 [v _T2CON T2CON `VEuc  1 e 1 @28 ]
-[s S1215 . 1 `uc 1 T2CKPS0 1 0 :1:0 
+[s S541 . 1 `uc 1 T2CKPS0 1 0 :1:0 
 `uc 1 T2CKPS1 1 0 :1:1 
 `uc 1 TMR2ON 1 0 :1:2 
 `uc 1 T2OUTPS0 1 0 :1:3 
@@ -313,19 +290,19 @@ I2C1_NULL 5
 `uc 1 T2OUTPS3 1 0 :1:6 
 ]
 "1029
-[s S1223 . 1 `uc 1 T2CKPS 1 0 :2:0 
+[s S549 . 1 `uc 1 T2CKPS 1 0 :2:0 
 `uc 1 . 1 0 :1:2 
 `uc 1 T2OUTPS 1 0 :4:3 
 ]
-[u S1227 . 1 `S1215 1 . 1 0 `S1223 1 . 1 0 ]
-[v _T2CONbits T2CONbits `VES1227  1 e 1 @28 ]
+[u S553 . 1 `S541 1 . 1 0 `S549 1 . 1 0 ]
+[v _T2CONbits T2CONbits `VES553  1 e 1 @28 ]
 "1185
 [v _TRISA TRISA `VEuc  1 e 1 @140 ]
 "1235
 [v _TRISB TRISB `VEuc  1 e 1 @141 ]
 "1274
 [v _TRISC TRISC `VEuc  1 e 1 @142 ]
-[s S848 . 1 `uc 1 TMR1IE 1 0 :1:0 
+[s S1121 . 1 `uc 1 TMR1IE 1 0 :1:0 
 `uc 1 TMR2IE 1 0 :1:1 
 `uc 1 CCP1IE 1 0 :1:2 
 `uc 1 SSP1IE 1 0 :1:3 
@@ -335,9 +312,9 @@ I2C1_NULL 5
 `uc 1 TMR1GIE 1 0 :1:7 
 ]
 "1353
-[u S857 . 1 `S848 1 . 1 0 ]
-[v _PIE1bits PIE1bits `VES857  1 e 1 @145 ]
-[s S1115 . 1 `uc 1 PS0 1 0 :1:0 
+[u S1130 . 1 `S1121 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES1130  1 e 1 @145 ]
+[s S426 . 1 `uc 1 PS0 1 0 :1:0 
 `uc 1 PS1 1 0 :1:1 
 `uc 1 PS2 1 0 :1:2 
 `uc 1 PSA 1 0 :1:3 
@@ -347,13 +324,13 @@ I2C1_NULL 5
 `uc 1 nWPUEN 1 0 :1:7 
 ]
 "1538
-[s S1124 . 1 `uc 1 PS 1 0 :3:0 
+[s S435 . 1 `uc 1 PS 1 0 :3:0 
 `uc 1 . 1 0 :1:3 
 `uc 1 T0SE 1 0 :1:4 
 `uc 1 T0CS 1 0 :1:5 
 ]
-[u S1129 . 1 `S1115 1 . 1 0 `S1124 1 . 1 0 ]
-[v _OPTION_REGbits OPTION_REGbits `VES1129  1 e 1 @149 ]
+[u S440 . 1 `S426 1 . 1 0 `S435 1 . 1 0 ]
+[v _OPTION_REGbits OPTION_REGbits `VES440  1 e 1 @149 ]
 "1649
 [v _WDTCON WDTCON `VEuc  1 e 1 @151 ]
 "1708
@@ -386,7 +363,7 @@ I2C1_NULL 5
 [v _EEDATL EEDATL `VEuc  1 e 1 @403 ]
 "3184
 [v _EEDATH EEDATH `VEuc  1 e 1 @404 ]
-[s S316 . 1 `uc 1 RD 1 0 :1:0 
+[s S213 . 1 `uc 1 RD 1 0 :1:0 
 `uc 1 WR 1 0 :1:1 
 `uc 1 WREN 1 0 :1:2 
 `uc 1 WRERR 1 0 :1:3 
@@ -396,8 +373,8 @@ I2C1_NULL 5
 `uc 1 EEPGD 1 0 :1:7 
 ]
 "3221
-[u S325 . 1 `S316 1 . 1 0 ]
-[v _EECON1bits EECON1bits `VES325  1 e 1 @405 ]
+[u S222 . 1 `S213 1 . 1 0 ]
+[v _EECON1bits EECON1bits `VES222  1 e 1 @405 ]
 "3266
 [v _EECON2 EECON2 `VEuc  1 e 1 @406 ]
 "3601
@@ -412,7 +389,7 @@ I2C1_NULL 5
 [v _SSP1ADD SSP1ADD `VEuc  1 e 1 @530 ]
 "3891
 [v _SSP1STAT SSP1STAT `VEuc  1 e 1 @532 ]
-[s S827 . 1 `uc 1 BF 1 0 :1:0 
+[s S1100 . 1 `uc 1 BF 1 0 :1:0 
 `uc 1 UA 1 0 :1:1 
 `uc 1 R_nW 1 0 :1:2 
 `uc 1 S 1 0 :1:3 
@@ -422,11 +399,11 @@ I2C1_NULL 5
 `uc 1 SMP 1 0 :1:7 
 ]
 "3913
-[u S836 . 1 `S827 1 . 1 0 ]
-[v _SSP1STATbits SSP1STATbits `VES836  1 e 1 @532 ]
+[u S1109 . 1 `S1100 1 . 1 0 ]
+[v _SSP1STATbits SSP1STATbits `VES1109  1 e 1 @532 ]
 "4013
 [v _SSP1CON1 SSP1CON1 `VEuc  1 e 1 @533 ]
-[s S622 . 1 `uc 1 SSPM0 1 0 :1:0 
+[s S895 . 1 `uc 1 SSPM0 1 0 :1:0 
 `uc 1 SSPM1 1 0 :1:1 
 `uc 1 SSPM2 1 0 :1:2 
 `uc 1 SSPM3 1 0 :1:3 
@@ -436,13 +413,13 @@ I2C1_NULL 5
 `uc 1 WCOL 1 0 :1:7 
 ]
 "4042
-[s S631 . 1 `uc 1 SSPM 1 0 :4:0 
+[s S904 . 1 `uc 1 SSPM 1 0 :4:0 
 ]
-[u S633 . 1 `S622 1 . 1 0 `S631 1 . 1 0 ]
-[v _SSP1CON1bits SSP1CON1bits `VES633  1 e 1 @533 ]
+[u S906 . 1 `S895 1 . 1 0 `S904 1 . 1 0 ]
+[v _SSP1CON1bits SSP1CON1bits `VES906  1 e 1 @533 ]
 "4217
 [v _SSP1CON2 SSP1CON2 `VEuc  1 e 1 @534 ]
-[s S787 . 1 `uc 1 SEN 1 0 :1:0 
+[s S1060 . 1 `uc 1 SEN 1 0 :1:0 
 `uc 1 RSEN 1 0 :1:1 
 `uc 1 PEN 1 0 :1:2 
 `uc 1 RCEN 1 0 :1:3 
@@ -452,8 +429,8 @@ I2C1_NULL 5
 `uc 1 GCEN 1 0 :1:7 
 ]
 "4239
-[u S796 . 1 `S787 1 . 1 0 ]
-[v _SSP1CON2bits SSP1CON2bits `VES796  1 e 1 @534 ]
+[u S1069 . 1 `S1060 1 . 1 0 ]
+[v _SSP1CON2bits SSP1CON2bits `VES1069  1 e 1 @534 ]
 "4784
 [v _CCPR1L CCPR1L `VEuc  1 e 1 @657 ]
 "4804
@@ -478,7 +455,7 @@ I2C1_NULL 5
 [v _CCP2AS CCP2AS `VEuc  1 e 1 @668 ]
 "5463
 [v _PSTR2CON PSTR2CON `VEuc  1 e 1 @669 ]
-[s S406 . 1 `uc 1 C1TSEL0 1 0 :1:0 
+[s S303 . 1 `uc 1 C1TSEL0 1 0 :1:0 
 `uc 1 C1TSEL1 1 0 :1:1 
 `uc 1 C2TSEL0 1 0 :1:2 
 `uc 1 C2TSEL1 1 0 :1:3 
@@ -488,74 +465,78 @@ I2C1_NULL 5
 `uc 1 C4TSEL1 1 0 :1:7 
 ]
 "5530
-[s S415 . 1 `uc 1 C1TSEL 1 0 :2:0 
+[s S312 . 1 `uc 1 C1TSEL 1 0 :2:0 
 `uc 1 C2TSEL 1 0 :2:2 
 `uc 1 C3TSEL 1 0 :2:4 
 `uc 1 C4TSEL 1 0 :2:6 
 ]
-[u S420 . 1 `S406 1 . 1 0 `S415 1 . 1 0 ]
-[v _CCPTMRSbits CCPTMRSbits `VES420  1 e 1 @670 ]
+[u S317 . 1 `S303 1 . 1 0 `S312 1 . 1 0 ]
+[v _CCPTMRSbits CCPTMRSbits `VES317  1 e 1 @670 ]
 "5713
 [v _CCPR4L CCPR4L `VEuc  1 e 1 @792 ]
 "5733
 [v _CCPR4H CCPR4H `VEuc  1 e 1 @793 ]
 "5753
 [v _CCP4CON CCP4CON `VEuc  1 e 1 @794 ]
-[s S1362 . 1 `uc 1 . 1 0 :4:0 
+[s S696 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 IOCBP4 1 0 :1:4 
 `uc 1 IOCBP5 1 0 :1:5 
 `uc 1 IOCBP6 1 0 :1:6 
 `uc 1 IOCBP7 1 0 :1:7 
 ]
 "6185
-[s S1368 . 1 `uc 1 . 1 0 :4:0 
+[s S702 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 IOCBP 1 0 :4:4 
 ]
-[u S1371 . 1 `S1362 1 . 1 0 `S1368 1 . 1 0 ]
-[v _IOCBPbits IOCBPbits `VES1371  1 e 1 @916 ]
-[s S1340 . 1 `uc 1 . 1 0 :4:0 
+[u S705 . 1 `S696 1 . 1 0 `S702 1 . 1 0 ]
+[v _IOCBPbits IOCBPbits `VES705  1 e 1 @916 ]
+[s S674 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 IOCBN4 1 0 :1:4 
 `uc 1 IOCBN5 1 0 :1:5 
 `uc 1 IOCBN6 1 0 :1:6 
 `uc 1 IOCBN7 1 0 :1:7 
 ]
 "6233
-[s S1346 . 1 `uc 1 . 1 0 :4:0 
+[s S680 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 IOCBN 1 0 :4:4 
 ]
-[u S1349 . 1 `S1340 1 . 1 0 `S1346 1 . 1 0 ]
-[v _IOCBNbits IOCBNbits `VES1349  1 e 1 @917 ]
-[s S1318 . 1 `uc 1 . 1 0 :4:0 
+[u S683 . 1 `S674 1 . 1 0 `S680 1 . 1 0 ]
+[v _IOCBNbits IOCBNbits `VES683  1 e 1 @917 ]
+[s S652 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 IOCBF4 1 0 :1:4 
 `uc 1 IOCBF5 1 0 :1:5 
 `uc 1 IOCBF6 1 0 :1:6 
 `uc 1 IOCBF7 1 0 :1:7 
 ]
 "6281
-[s S1324 . 1 `uc 1 . 1 0 :4:0 
+[s S658 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 IOCBF 1 0 :4:4 
 ]
-[u S1327 . 1 `S1318 1 . 1 0 `S1324 1 . 1 0 ]
-[v _IOCBFbits IOCBFbits `VES1327  1 e 1 @918 ]
+[u S661 . 1 `S652 1 . 1 0 `S658 1 . 1 0 ]
+[v _IOCBFbits IOCBFbits `VES661  1 e 1 @918 ]
 "7999
 [v _PLLR PLLR `VEb  1 e 0 @1238 ]
+"52 D:\Users\Robo\work\MPLAB\tiny\Tiny.X\main.c
+[v _intensity_red intensity_red `uc  1 e 1 0 ]
 "30 D:\Users\Robo\work\MPLAB\tiny\Tiny.X\mcc_generated_files/ext_int.c
 [v _INT_InterruptHandler INT_InterruptHandler `*.37(v  1 e 2 0 ]
 "146 D:\Users\Robo\work\MPLAB\tiny\Tiny.X\mcc_generated_files/i2c1_master.c
 [v _i2c1_fsmStateTable i2c1_fsmStateTable `DC[16]*.37(E3009  1 e 32 0 ]
-[s S596 . 29 `[6]*.37(E360 1 callbackTable 12 0 `[6]*.1v 1 callbackPayload 6 12 `us 1 time_out 2 18 `us 1 time_out_value 2 20 `uc 1 address 1 22 `*.4uc 1 data_ptr 1 23 `ui 1 data_length 2 24 `E3009 1 state 1 26 `E355 1 error 1 27 `uc 1 addressNackCheck 1 28 :1:0 
+[s S869 . 29 `[6]*.37(E360 1 callbackTable 12 0 `[6]*.4v 1 callbackPayload 6 12 `us 1 time_out 2 18 `us 1 time_out_value 2 20 `uc 1 address 1 22 `*.4uc 1 data_ptr 1 23 `ui 1 data_length 2 24 `E3009 1 state 1 26 `E355 1 error 1 27 `uc 1 addressNackCheck 1 28 :1:0 
 `uc 1 busy 1 28 :1:1 
 `uc 1 inUse 1 28 :1:2 
 `uc 1 bufferFree 1 28 :1:3 
 ]
 "165
-[v _I2C1_Status I2C1_Status `S596  1 e 29 0 ]
+[v _I2C1_Status I2C1_Status `S869  1 e 29 0 ]
 "54 D:\Users\Robo\work\MPLAB\tiny\Tiny.X\mcc_generated_files/pin_manager.c
 [v _IOCBF7_InterruptHandler IOCBF7_InterruptHandler `*.37(v  1 e 2 0 ]
-"48 D:\Users\Robo\work\MPLAB\tiny\Tiny.X\main.c
+"57 D:\Users\Robo\work\MPLAB\tiny\Tiny.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"138
+"91
+[v main@data data `uc  1 a 1 22 ]
+"187
 } 0
 "50 D:\Users\Robo\work\MPLAB\tiny\Tiny.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
@@ -585,7 +566,7 @@ I2C1_NULL 5
 "142
 [v _IOCBF7_SetInterruptHandler IOCBF7_SetInterruptHandler `(v  1 e 1 0 ]
 {
-[v IOCBF7_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 0 ]
+[v IOCBF7_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 4 ]
 "144
 } 0
 "64 D:\Users\Robo\work\MPLAB\tiny\Tiny.X\mcc_generated_files/mcc.c
@@ -606,7 +587,7 @@ I2C1_NULL 5
 "50
 [v _INT_SetInterruptHandler INT_SetInterruptHandler `(v  1 e 1 0 ]
 {
-[v INT_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 0 ]
+[v INT_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 4 ]
 "52
 } 0
 "64 D:\Users\Robo\work\MPLAB\tiny\Tiny.X\mcc_generated_files/epwm2.c
@@ -622,25 +603,329 @@ I2C1_NULL 5
 "82 D:\Users\Robo\work\MPLAB\tiny\Tiny.X\mcc_generated_files/pwm4.c
 [v _PWM4_LoadDutyValue PWM4_LoadDutyValue `(v  1 e 1 0 ]
 {
-[v PWM4_LoadDutyValue@dutyValue dutyValue `us  1 p 2 0 ]
+[v PWM4_LoadDutyValue@dutyValue dutyValue `us  1 p 2 4 ]
 "89
+} 0
+"91 D:\Users\Robo\work\MPLAB\tiny\Tiny.X\mcc_generated_files/examples/i2c1_master_example.c
+[v _I2C1_Write1ByteRegister I2C1_Write1ByteRegister `(v  1 e 1 0 ]
+{
+[v I2C1_Write1ByteRegister@address address `uc  1 a 1 wreg ]
+[v I2C1_Write1ByteRegister@address address `uc  1 a 1 wreg ]
+[v I2C1_Write1ByteRegister@reg reg `uc  1 p 1 16 ]
+[v I2C1_Write1ByteRegister@data data `uc  1 p 1 17 ]
+[v I2C1_Write1ByteRegister@address address `uc  1 a 1 19 ]
+"99
+} 0
+"63
+[v _I2C1_Read1ByteRegister I2C1_Read1ByteRegister `(uc  1 e 1 0 ]
+{
+[v I2C1_Read1ByteRegister@address address `uc  1 a 1 wreg ]
+"65
+[v I2C1_Read1ByteRegister@returnValue returnValue `uc  1 a 1 19 ]
+"63
+[v I2C1_Read1ByteRegister@address address `uc  1 a 1 wreg ]
+[v I2C1_Read1ByteRegister@reg reg `uc  1 p 1 16 ]
+"65
+[v I2C1_Read1ByteRegister@address address `uc  1 a 1 18 ]
+"75
+} 0
+"283 D:\Users\Robo\work\MPLAB\tiny\Tiny.X\mcc_generated_files/i2c1_master.c
+[v _I2C1_SetAddressNackCallback I2C1_SetAddressNackCallback `(v  1 e 1 0 ]
+{
+[v I2C1_SetAddressNackCallback@cb cb `*.37(E360  1 p 2 2 ]
+[v I2C1_SetAddressNackCallback@ptr ptr `*.1v  1 p 1 4 ]
+"286
+} 0
+"176
+[v _I2C1_Open I2C1_Open `(E355  1 e 1 0 ]
+{
+[v I2C1_Open@address address `uc  1 a 1 wreg ]
+"178
+[v I2C1_Open@returnValue returnValue `E355  1 a 1 6 ]
+"176
+[v I2C1_Open@address address `uc  1 a 1 wreg ]
+"178
+[v I2C1_Open@address address `uc  1 a 1 5 ]
+"207
+} 0
+"543
+[v _I2C1_MasterOpen I2C1_MasterOpen `T(a  1 s 1 I2C1_MasterOpen ]
+{
+"555
+} 0
+"251
+[v _I2C1_MasterWrite I2C1_MasterWrite `(E355  1 e 1 0 ]
+{
+"254
+} 0
+"224
+[v _I2C1_MasterOperation I2C1_MasterOperation `(E355  1 e 1 0 ]
+{
+[v I2C1_MasterOperation@read read `a  1 a 1 wreg ]
+"226
+[v I2C1_MasterOperation@returnValue returnValue `E355  1 a 1 15 ]
+"224
+[v I2C1_MasterOperation@read read `a  1 a 1 wreg ]
+"226
+[v I2C1_MasterOperation@read read `a  1 a 1 14 ]
+"244
+} 0
+"312
+[v _I2C1_Poller I2C1_Poller `(v  1 s 1 I2C1_Poller ]
+{
+"319
+} 0
+"650
+[v _I2C1_MasterWaitForEvent I2C1_MasterWaitForEvent `T(v  1 s 1 I2C1_MasterWaitForEvent ]
+{
+"659
+} 0
+"321
+[v _I2C1_MasterFsm I2C1_MasterFsm `T(v  1 s 1 I2C1_MasterFsm ]
+{
+"330
+} 0
+"500
+[v _I2C1_DO_ADDRESS_NACK I2C1_DO_ADDRESS_NACK `(E3009  1 s 1 I2C1_DO_ADDRESS_NACK ]
+{
+"512
+} 0
+"494
+[v _I2C1_DO_RESET I2C1_DO_RESET `(E3009  1 s 1 I2C1_DO_RESET ]
+{
+"499
+} 0
+"488
+[v _I2C1_DO_RX_NACK_RESTART I2C1_DO_RX_NACK_RESTART `(E3009  1 s 1 I2C1_DO_RX_NACK_RESTART ]
+{
+"492
+} 0
+"482
+[v _I2C1_DO_RX_NACK_STOP I2C1_DO_RX_NACK_STOP `(E3009  1 s 1 I2C1_DO_RX_NACK_STOP ]
+{
+"486
+} 0
+"475
+[v _I2C1_DO_RX_ACK I2C1_DO_RX_ACK `(E3009  1 s 1 I2C1_DO_RX_ACK ]
+{
+"479
+} 0
+"469
+[v _I2C1_DO_SEND_STOP I2C1_DO_SEND_STOP `(E3009  1 s 1 I2C1_DO_SEND_STOP ]
+{
+"473
+} 0
+"463
+[v _I2C1_DO_SEND_RESTART I2C1_DO_SEND_RESTART `(E3009  1 s 1 I2C1_DO_SEND_RESTART ]
+{
+"467
+} 0
+"456
+[v _I2C1_DO_SEND_RESTART_WRITE I2C1_DO_SEND_RESTART_WRITE `(E3009  1 s 1 I2C1_DO_SEND_RESTART_WRITE ]
+{
+"460
+} 0
+"450
+[v _I2C1_DO_SEND_RESTART_READ I2C1_DO_SEND_RESTART_READ `(E3009  1 s 1 I2C1_DO_SEND_RESTART_READ ]
+{
+"454
+} 0
+"402
+[v _I2C1_DO_RCEN I2C1_DO_RCEN `(E3009  1 s 1 I2C1_DO_RCEN ]
+{
+"407
+} 0
+"378
+[v _I2C1_DO_RX I2C1_DO_RX `(E3009  1 s 1 I2C1_DO_RX ]
+{
+"400
+} 0
+"354
+[v _I2C1_DO_TX I2C1_DO_TX `(E3009  1 s 1 I2C1_DO_TX ]
+{
+"376
+} 0
+"347
+[v _I2C1_DO_SEND_ADR_WRITE I2C1_DO_SEND_ADR_WRITE `(E3009  1 s 1 I2C1_DO_SEND_ADR_WRITE ]
+{
+"352
+} 0
+"340
+[v _I2C1_DO_SEND_ADR_READ I2C1_DO_SEND_ADR_READ `(E3009  1 s 1 I2C1_DO_SEND_ADR_READ ]
+{
+"345
+} 0
+"333
+[v _I2C1_DO_IDLE I2C1_DO_IDLE `(E3009  1 s 1 I2C1_DO_IDLE ]
+{
+"338
+} 0
+"409
+[v _I2C1_DO_TX_EMPTY I2C1_DO_TX_EMPTY `(E3009  1 s 1 I2C1_DO_TX_EMPTY ]
+{
+"424
+} 0
+"645
+[v _I2C1_MasterSetIrq I2C1_MasterSetIrq `T(v  1 s 1 I2C1_MasterSetIrq ]
+{
+"648
+} 0
+"598
+[v _I2C1_MasterIsNack I2C1_MasterIsNack `T(a  1 s 1 I2C1_MasterIsNack ]
+{
+"601
+} 0
+"568
+[v _I2C1_MasterSendTxData I2C1_MasterSendTxData `T(v  1 s 1 I2C1_MasterSendTxData ]
+{
+[v I2C1_MasterSendTxData@data data `uc  1 a 1 wreg ]
+[v I2C1_MasterSendTxData@data data `uc  1 a 1 wreg ]
+"570
+[v I2C1_MasterSendTxData@data data `uc  1 a 1 4 ]
+"571
+} 0
+"603
+[v _I2C1_MasterSendAck I2C1_MasterSendAck `T(v  1 s 1 I2C1_MasterSendAck ]
+{
+"607
+} 0
+"563
+[v _I2C1_MasterGetRxData I2C1_MasterGetRxData `T(uc  1 s 1 I2C1_MasterGetRxData ]
+{
+"566
+} 0
+"609
+[v _I2C1_MasterSendNack I2C1_MasterSendNack `T(v  1 s 1 I2C1_MasterSendNack ]
+{
+"613
+} 0
+"583
+[v _I2C1_MasterStartRx I2C1_MasterStartRx `T(v  1 s 1 I2C1_MasterStartRx ]
+{
+"586
+} 0
+"525
+[v _I2C1_CallbackReturnReset I2C1_CallbackReturnReset `(E360  1 e 1 0 ]
+{
+[v I2C1_CallbackReturnReset@funPtr funPtr `*.4v  1 p 1 6 ]
+"528
+} 0
+"520
+[v _I2C1_CallbackReturnStop I2C1_CallbackReturnStop `(E360  1 e 1 0 ]
+{
+"523
+} 0
+"170 D:\Users\Robo\work\MPLAB\tiny\Tiny.X\mcc_generated_files/examples/i2c1_master_example.c
+[v _rdBlkRegCompleteHandler rdBlkRegCompleteHandler `(E360  1 s 1 rdBlkRegCompleteHandler ]
+{
+[v rdBlkRegCompleteHandler@ptr ptr `*.4v  1 p 1 6 ]
+"175
+} 0
+"156
+[v _wr1RegCompleteHandler wr1RegCompleteHandler `(E360  1 s 1 wr1RegCompleteHandler ]
+{
+[v wr1RegCompleteHandler@ptr ptr `*.4v  1 p 1 6 ]
+"161
+} 0
+"149
+[v _rd2RegCompleteHandler rd2RegCompleteHandler `(E360  1 s 1 rd2RegCompleteHandler ]
+{
+[v rd2RegCompleteHandler@ptr ptr `*.4v  1 p 1 6 ]
+"154
+} 0
+"142
+[v _rd1RegCompleteHandler rd1RegCompleteHandler `(E360  1 s 1 rd1RegCompleteHandler ]
+{
+[v rd1RegCompleteHandler@ptr ptr `*.4v  1 p 1 6 ]
+"147
+} 0
+"163
+[v _wr2RegCompleteHandler wr2RegCompleteHandler `(E360  1 s 1 wr2RegCompleteHandler ]
+{
+[v wr2RegCompleteHandler@ptr ptr `*.4v  1 p 1 6 ]
+"168
+} 0
+"273 D:\Users\Robo\work\MPLAB\tiny\Tiny.X\mcc_generated_files/i2c1_master.c
+[v _I2C1_SetDataCompleteCallback I2C1_SetDataCompleteCallback `(v  1 e 1 0 ]
+{
+[v I2C1_SetDataCompleteCallback@cb cb `*.37(E360  1 p 2 2 ]
+[v I2C1_SetDataCompleteCallback@ptr ptr `*.4v  1 p 1 4 ]
+"276
+} 0
+"298
+[v _I2C1_SetCallback I2C1_SetCallback `(v  1 s 1 I2C1_SetCallback ]
+{
+[v I2C1_SetCallback@idx idx `E3027  1 a 1 wreg ]
+[v I2C1_SetCallback@idx idx `E3027  1 a 1 wreg ]
+[v I2C1_SetCallback@cb cb `*.37(E360  1 p 2 4 ]
+[v I2C1_SetCallback@ptr ptr `*.4v  1 p 1 6 ]
+"300
+[v I2C1_SetCallback@idx idx `E3027  1 a 1 1 ]
+"310
+} 0
+"263
+[v _I2C1_SetBuffer I2C1_SetBuffer `(v  1 e 1 0 ]
+{
+[v I2C1_SetBuffer@buffer buffer `*.4v  1 a 1 wreg ]
+[v I2C1_SetBuffer@buffer buffer `*.4v  1 a 1 wreg ]
+[v I2C1_SetBuffer@bufferSize bufferSize `ui  1 p 2 4 ]
+"265
+[v I2C1_SetBuffer@buffer buffer `*.4v  1 a 1 0 ]
+"271
+} 0
+"593
+[v _I2C1_MasterStop I2C1_MasterStop `T(v  1 s 1 I2C1_MasterStop ]
+{
+"596
+} 0
+"573
+[v _I2C1_MasterEnableRestart I2C1_MasterEnableRestart `T(v  1 s 1 I2C1_MasterEnableRestart ]
+{
+"576
+} 0
+"588
+[v _I2C1_MasterStart I2C1_MasterStart `T(v  1 s 1 I2C1_MasterStart ]
+{
+"591
+} 0
+"209
+[v _I2C1_Close I2C1_Close `(E355  1 e 1 0 ]
+{
+"211
+[v I2C1_Close@returnValue returnValue `E355  1 a 1 5 ]
+"222
+} 0
+"635
+[v _I2C1_MasterDisableIrq I2C1_MasterDisableIrq `T(v  1 s 1 I2C1_MasterDisableIrq ]
+{
+"638
+} 0
+"557
+[v _I2C1_MasterClose I2C1_MasterClose `T(v  1 s 1 I2C1_MasterClose ]
+{
+"561
+} 0
+"640
+[v _I2C1_MasterClearIrq I2C1_MasterClearIrq `T(v  1 s 1 I2C1_MasterClearIrq ]
+{
+"643
 } 0
 "90 D:\Users\Robo\work\MPLAB\tiny\Tiny.X\mcc_generated_files/epwm2.c
 [v _EPWM2_LoadDutyValue EPWM2_LoadDutyValue `(v  1 e 1 0 ]
 {
-[v EPWM2_LoadDutyValue@dutyValue dutyValue `us  1 p 2 0 ]
+[v EPWM2_LoadDutyValue@dutyValue dutyValue `us  1 p 2 4 ]
 "97
 } 0
 "90 D:\Users\Robo\work\MPLAB\tiny\Tiny.X\mcc_generated_files/epwm1.c
 [v _EPWM1_LoadDutyValue EPWM1_LoadDutyValue `(v  1 e 1 0 ]
 {
-[v EPWM1_LoadDutyValue@dutyValue dutyValue `us  1 p 2 0 ]
+[v EPWM1_LoadDutyValue@dutyValue dutyValue `us  1 p 2 4 ]
 "97
 } 0
 "38 D:\Users\Robo\work\MPLAB\tiny\Tiny.X\mcc_generated_files/delay.c
 [v _DELAY_milliseconds DELAY_milliseconds `(v  1 e 1 0 ]
 {
-[v DELAY_milliseconds@milliseconds milliseconds `us  1 p 2 0 ]
+[v DELAY_milliseconds@milliseconds milliseconds `us  1 p 2 4 ]
 "42
 } 0
 "52 D:\Users\Robo\work\MPLAB\tiny\Tiny.X\mcc_generated_files/interrupt_manager.c
@@ -658,7 +943,12 @@ I2C1_NULL 5
 {
 "137
 } 0
-"149
+"195 D:\Users\Robo\work\MPLAB\tiny\Tiny.X\main.c
+[v _ButtonInterrupt ButtonInterrupt `(v  1 e 1 0 ]
+{
+"197
+} 0
+"149 D:\Users\Robo\work\MPLAB\tiny\Tiny.X\mcc_generated_files/pin_manager.c
 [v _IOCBF7_DefaultInterruptHandler IOCBF7_DefaultInterruptHandler `(v  1 e 1 0 ]
 {
 "152
@@ -677,4 +967,15 @@ I2C1_NULL 5
 [v _INT_DefaultInterruptHandler INT_DefaultInterruptHandler `(v  1 e 1 0 ]
 {
 "57
+} 0
+"190 D:\Users\Robo\work\MPLAB\tiny\Tiny.X\main.c
+[v _WakeUpInterrupt WakeUpInterrupt `(v  1 e 1 0 ]
+{
+"192
+} 0
+"90 D:\Users\Robo\work\MPLAB\tiny\Tiny.X\mcc_generated_files/epwm2.c
+[v i1_EPWM2_LoadDutyValue EPWM2_LoadDutyValue `(v  1 e 1 0 ]
+{
+[v i1EPWM2_LoadDutyValue@dutyValue dutyValue `us  1 p 2 0 ]
+"97
 } 0

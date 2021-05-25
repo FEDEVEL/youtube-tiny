@@ -9,7 +9,7 @@ mcc_generated_files/tmr2.h  \
 mcc_generated_files/pwm4.h  \
 mcc_generated_files/epwm2.h  \
 mcc_generated_files/epwm1.h  \
-mcc_generated_files/ext_int.h  \
 mcc_generated_files/memory.h  \
+mcc_generated_files/ext_int.h  \
 mcc_generated_files/delay.h  \
-mcc_generated_files/drivers/i2c_simple_master.h 
+mcc_generated_files/examples/i2c1_master_example.h 

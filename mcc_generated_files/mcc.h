@@ -58,10 +58,9 @@
 #include "pwm4.h"
 #include "epwm2.h"
 #include "epwm1.h"
-#include "ext_int.h"
 #include "memory.h"
+#include "ext_int.h"
 #include "delay.h"
-#include "drivers/i2c_simple_master.h"
 
 
 
