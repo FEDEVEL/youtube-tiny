@@ -2,14 +2,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 "89 mcc_generated_files/i2c1_master.h
 [; ;mcc_generated_files/i2c1_master.h: 89: void I2C1_Initialize(void);
 [v _I2C1_Initialize `(v ~T0 @X0 0 ef ]
-"169 mcc_generated_files/pin_manager.h
-[; ;mcc_generated_files/pin_manager.h: 169: void PIN_MANAGER_Initialize (void);
+"160 mcc_generated_files/pin_manager.h
+[; ;mcc_generated_files/pin_manager.h: 160: void PIN_MANAGER_Initialize (void);
 [v _PIN_MANAGER_Initialize `(v ~T0 @X0 0 ef ]
-"91 mcc_generated_files/mcc.h
-[; ;mcc_generated_files/mcc.h: 91: void OSCILLATOR_Initialize(void);
+"92 mcc_generated_files/mcc.h
+[; ;mcc_generated_files/mcc.h: 92: void OSCILLATOR_Initialize(void);
 [v _OSCILLATOR_Initialize `(v ~T0 @X0 0 ef ]
-"103
-[; ;mcc_generated_files/mcc.h: 103: void WDT_Initialize(void);
+"104
+[; ;mcc_generated_files/mcc.h: 104: void WDT_Initialize(void);
 [v _WDT_Initialize `(v ~T0 @X0 0 ef ]
 "96 mcc_generated_files/epwm2.h
 [; ;mcc_generated_files/epwm2.h: 96: void EPWM2_Initialize(void);
@@ -17,6 +17,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "96 mcc_generated_files/epwm1.h
 [; ;mcc_generated_files/epwm1.h: 96: void EPWM1_Initialize(void);
 [v _EPWM1_Initialize `(v ~T0 @X0 0 ef ]
+"104 mcc_generated_files/tmr4.h
+[; ;mcc_generated_files/tmr4.h: 104: void TMR4_Initialize(void);
+[v _TMR4_Initialize `(v ~T0 @X0 0 ef ]
 "97 mcc_generated_files/pwm4.h
 [; ;mcc_generated_files/pwm4.h: 97: void PWM4_Initialize(void);
 [v _PWM4_Initialize `(v ~T0 @X0 0 ef ]
@@ -569,66 +572,69 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/mcc.c: 58:     EPWM1_Initialize();
 [e ( _EPWM1_Initialize ..  ]
 "59
-[; ;mcc_generated_files/mcc.c: 59:     PWM4_Initialize();
-[e ( _PWM4_Initialize ..  ]
+[; ;mcc_generated_files/mcc.c: 59:     TMR4_Initialize();
+[e ( _TMR4_Initialize ..  ]
 "60
-[; ;mcc_generated_files/mcc.c: 60:     TMR2_Initialize();
-[e ( _TMR2_Initialize ..  ]
+[; ;mcc_generated_files/mcc.c: 60:     PWM4_Initialize();
+[e ( _PWM4_Initialize ..  ]
 "61
-[; ;mcc_generated_files/mcc.c: 61:     EXT_INT_Initialize();
-[e ( _EXT_INT_Initialize ..  ]
+[; ;mcc_generated_files/mcc.c: 61:     TMR2_Initialize();
+[e ( _TMR2_Initialize ..  ]
 "62
-[; ;mcc_generated_files/mcc.c: 62: }
+[; ;mcc_generated_files/mcc.c: 62:     EXT_INT_Initialize();
+[e ( _EXT_INT_Initialize ..  ]
+"63
+[; ;mcc_generated_files/mcc.c: 63: }
 [e :UE 380 ]
 }
-"64
-[; ;mcc_generated_files/mcc.c: 64: void OSCILLATOR_Initialize(void)
-[v _OSCILLATOR_Initialize `(v ~T0 @X0 1 ef ]
 "65
-[; ;mcc_generated_files/mcc.c: 65: {
+[; ;mcc_generated_files/mcc.c: 65: void OSCILLATOR_Initialize(void)
+[v _OSCILLATOR_Initialize `(v ~T0 @X0 1 ef ]
+"66
+[; ;mcc_generated_files/mcc.c: 66: {
 {
 [e :U _OSCILLATOR_Initialize ]
 [f ]
-"67
-[; ;mcc_generated_files/mcc.c: 67:     OSCCON = 0x70;
+"68
+[; ;mcc_generated_files/mcc.c: 68:     OSCCON = 0x70;
 [e = _OSCCON -> -> 112 `i `uc ]
-"69
-[; ;mcc_generated_files/mcc.c: 69:     OSCTUNE = 0x00;
+"70
+[; ;mcc_generated_files/mcc.c: 70:     OSCTUNE = 0x00;
 [e = _OSCTUNE -> -> 0 `i `uc ]
-"71
-[; ;mcc_generated_files/mcc.c: 71:     BORCON = 0x00;
+"72
+[; ;mcc_generated_files/mcc.c: 72:     BORCON = 0x00;
 [e = _BORCON -> -> 0 `i `uc ]
-"73
-[; ;mcc_generated_files/mcc.c: 73:     while(PLLR == 0)
+"74
+[; ;mcc_generated_files/mcc.c: 74:     while(PLLR == 0)
 [e $U 382  ]
 [e :U 383 ]
-"74
-[; ;mcc_generated_files/mcc.c: 74:     {
-{
 "75
-[; ;mcc_generated_files/mcc.c: 75:     }
+[; ;mcc_generated_files/mcc.c: 75:     {
+{
+"76
+[; ;mcc_generated_files/mcc.c: 76:     }
 }
 [e :U 382 ]
-"73
-[; ;mcc_generated_files/mcc.c: 73:     while(PLLR == 0)
+"74
+[; ;mcc_generated_files/mcc.c: 74:     while(PLLR == 0)
 [e $ == -> _PLLR `i -> 0 `i 383  ]
 [e :U 384 ]
-"76
-[; ;mcc_generated_files/mcc.c: 76: }
+"77
+[; ;mcc_generated_files/mcc.c: 77: }
 [e :UE 381 ]
 }
-"78
-[; ;mcc_generated_files/mcc.c: 78: void WDT_Initialize(void)
-[v _WDT_Initialize `(v ~T0 @X0 1 ef ]
 "79
-[; ;mcc_generated_files/mcc.c: 79: {
+[; ;mcc_generated_files/mcc.c: 79: void WDT_Initialize(void)
+[v _WDT_Initialize `(v ~T0 @X0 1 ef ]
+"80
+[; ;mcc_generated_files/mcc.c: 80: {
 {
 [e :U _WDT_Initialize ]
 [f ]
-"81
-[; ;mcc_generated_files/mcc.c: 81:     WDTCON = 0x16;
-[e = _WDTCON -> -> 22 `i `uc ]
 "82
-[; ;mcc_generated_files/mcc.c: 82: }
+[; ;mcc_generated_files/mcc.c: 82:     WDTCON = 0x16;
+[e = _WDTCON -> -> 22 `i `uc ]
+"83
+[; ;mcc_generated_files/mcc.c: 83: }
 [e :UE 385 ]
 }

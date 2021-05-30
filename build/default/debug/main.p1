@@ -1,22 +1,41 @@
 Version 4.0 HI-TECH Software Intermediate Code
+"122 ./mcc_generated_files/epwm1.h
+[; ;./mcc_generated_files/epwm1.h: 122: void EPWM1_LoadDutyValue(uint16_t dutyValue);
+[v _EPWM1_LoadDutyValue `(v ~T0 @X0 0 ef1`us ]
+"122 ./mcc_generated_files/epwm2.h
+[; ;./mcc_generated_files/epwm2.h: 122: void EPWM2_LoadDutyValue(uint16_t dutyValue);
+[v _EPWM2_LoadDutyValue `(v ~T0 @X0 0 ef1`us ]
+"124 ./mcc_generated_files/pwm4.h
+[; ;./mcc_generated_files/pwm4.h: 124: void PWM4_LoadDutyValue(uint16_t dutyValue);
+[v _PWM4_LoadDutyValue `(v ~T0 @X0 0 ef1`us ]
+"34 ./mcc_generated_files/delay.h
+[; ;./mcc_generated_files/delay.h: 34: void DELAY_milliseconds(uint16_t milliseconds);
+[v _DELAY_milliseconds `(v ~T0 @X0 0 ef1`us ]
 [p mainexit ]
-"78 ./mcc_generated_files/mcc.h
-[; ;./mcc_generated_files/mcc.h: 78: void SYSTEM_Initialize(void);
+"79 ./mcc_generated_files/mcc.h
+[; ;./mcc_generated_files/mcc.h: 79: void SYSTEM_Initialize(void);
 [v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
-[v F3070 `(v ~T0 @X0 0 tf ]
+[v F3087 `(v ~T0 @X0 0 tf ]
 "319 ./mcc_generated_files/ext_int.h
 [; ;./mcc_generated_files/ext_int.h: 319: void INT_SetInterruptHandler(void (* InterruptHandler)(void));
-[v _INT_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F3070 ]
-"49 main.c
-[; ;main.c: 49: void WakeUpInterrupt(void);
+[v _INT_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F3087 ]
+"48 main.c
+[; ;main.c: 48: void WakeUpInterrupt(void);
 [v _WakeUpInterrupt `(v ~T0 @X0 0 ef ]
 [v F2591 `(v ~T0 @X0 0 tf ]
-"217 ./mcc_generated_files/pin_manager.h
-[; ;./mcc_generated_files/pin_manager.h: 217: void IOCBF7_SetInterruptHandler(void (* InterruptHandler)(void));
+"208 ./mcc_generated_files/pin_manager.h
+[; ;./mcc_generated_files/pin_manager.h: 208: void IOCBF7_SetInterruptHandler(void (* InterruptHandler)(void));
 [v _IOCBF7_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F2591 ]
-"50 main.c
-[; ;main.c: 50: void ButtonInterrupt(void);
+"49 main.c
+[; ;main.c: 49: void ButtonInterrupt(void);
 [v _ButtonInterrupt `(v ~T0 @X0 0 ef ]
+[v F3043 `(v ~T0 @X0 0 tf ]
+"344 ./mcc_generated_files/tmr4.h
+[; ;./mcc_generated_files/tmr4.h: 344:  void TMR4_SetInterruptHandler(void (* InterruptHandler)(void));
+[v _TMR4_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F3043 ]
+"50 main.c
+[; ;main.c: 50: void TimerInterrupt(void);
+[v _TimerInterrupt `(v ~T0 @X0 0 ef ]
 "357 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1829.h
 [; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1829.h: 357:     struct {
 [s S31 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -35,21 +54,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 "56 ./mcc_generated_files/examples/i2c1_master_example.h
 [; ;./mcc_generated_files/examples/i2c1_master_example.h: 56: void I2C1_Write1ByteRegister(i2c1_address_t address, uint8_t reg, uint8_t data);
 [v _I2C1_Write1ByteRegister `(v ~T0 @X0 0 ef3`uc`uc`uc ]
-"34 ./mcc_generated_files/delay.h
-[; ;./mcc_generated_files/delay.h: 34: void DELAY_milliseconds(uint16_t milliseconds);
-[v _DELAY_milliseconds `(v ~T0 @X0 0 ef1`us ]
-"54 ./mcc_generated_files/examples/i2c1_master_example.h
+"54
 [; ;./mcc_generated_files/examples/i2c1_master_example.h: 54: uint8_t I2C1_Read1ByteRegister(i2c1_address_t address, uint8_t reg);
 [v _I2C1_Read1ByteRegister `(uc ~T0 @X0 0 ef2`uc`uc ]
-"122 ./mcc_generated_files/epwm1.h
-[; ;./mcc_generated_files/epwm1.h: 122: void EPWM1_LoadDutyValue(uint16_t dutyValue);
-[v _EPWM1_LoadDutyValue `(v ~T0 @X0 0 ef1`us ]
-"122 ./mcc_generated_files/epwm2.h
-[; ;./mcc_generated_files/epwm2.h: 122: void EPWM2_LoadDutyValue(uint16_t dutyValue);
-[v _EPWM2_LoadDutyValue `(v ~T0 @X0 0 ef1`us ]
-"124 ./mcc_generated_files/pwm4.h
-[; ;./mcc_generated_files/pwm4.h: 124: void PWM4_LoadDutyValue(uint16_t dutyValue);
-[v _PWM4_LoadDutyValue `(v ~T0 @X0 0 ef1`us ]
+"165 ./mcc_generated_files/tmr4.h
+[; ;./mcc_generated_files/tmr4.h: 165: void TMR4_StopTimer(void);
+[v _TMR4_StopTimer `(v ~T0 @X0 0 ef ]
 "54 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1829.h
 [; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1829.h: 54: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -551,261 +561,326 @@ Version 4.0 HI-TECH Software Intermediate Code
 "7057
 [; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1829.h: 7057: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
-"52 main.c
-[; ;main.c: 52: extern uint8_t intensity_red = 0;
-[v _intensity_red `uc ~T0 @X0 1 e ]
-[i _intensity_red
--> -> 0 `i `uc
-]
-[v $root$_main `(v ~T0 @X0 0 e ]
-"57
-[; ;main.c: 57: void main(void)
-[v _main `(v ~T0 @X0 1 ef ]
+"57 main.c
+[; ;main.c: 57: void patronus(void)
+[v _patronus `(v ~T0 @X0 1 ef ]
 "58
 [; ;main.c: 58: {
 {
-[e :U _main ]
+[e :U _patronus ]
 [f ]
+"59
+[; ;main.c: 59:     EPWM1_LoadDutyValue(0);
+[e ( _EPWM1_LoadDutyValue (1 -> -> 0 `i `us ]
 "60
-[; ;main.c: 60:     SYSTEM_Initialize();
-[e ( _SYSTEM_Initialize ..  ]
-"64
-[; ;main.c: 64:     INT_SetInterruptHandler(WakeUpInterrupt);
-[e ( _INT_SetInterruptHandler (1 &U _WakeUpInterrupt ]
-"71
-[; ;main.c: 71:     IOCBF7_SetInterruptHandler(ButtonInterrupt);
-[e ( _IOCBF7_SetInterruptHandler (1 &U _ButtonInterrupt ]
-"77
-[; ;main.c: 77:     (INTCONbits.GIE = 1);
-[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
-"80
-[; ;main.c: 80:     (INTCONbits.PEIE = 1);
-[e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
-"88
-[; ;main.c: 88:     I2C1_Write1ByteRegister(0x0E, 0x1D, 0b10000000);
-[e ( _I2C1_Write1ByteRegister (3 , , -> -> 14 `i `uc -> -> 29 `i `uc -> -> 128 `i `uc ]
-"89
-[; ;main.c: 89:     DELAY_milliseconds(1000);
-[e ( _DELAY_milliseconds (1 -> -> 1000 `i `us ]
-"91
-[; ;main.c: 91:     uint8_t data;
-[v _data `uc ~T0 @X0 1 a ]
-"92
-[; ;main.c: 92:     data = I2C1_Read1ByteRegister(0x0E, 0x0F);
-[e = _data ( _I2C1_Read1ByteRegister (2 , -> -> 14 `i `uc -> -> 15 `i `uc ]
-"93
-[; ;main.c: 93:     data = data + 1;
-[e = _data -> + -> _data `i -> 1 `i `uc ]
-"95
-[; ;main.c: 95:     I2C1_Write1ByteRegister(0x0E, 0x1E, 0b00101000);
-[e ( _I2C1_Write1ByteRegister (3 , , -> -> 14 `i `uc -> -> 30 `i `uc -> -> 40 `i `uc ]
-"96
-[; ;main.c: 96:     I2C1_Write1ByteRegister(0x0E, 0x1F, 0b10111111);
-[e ( _I2C1_Write1ByteRegister (3 , , -> -> 14 `i `uc -> -> 31 `i `uc -> -> 191 `i `uc ]
-"97
-[; ;main.c: 97:     I2C1_Write1ByteRegister(0x0E, 0x1B, 0b01000000);
-[e ( _I2C1_Write1ByteRegister (3 , , -> -> 14 `i `uc -> -> 27 `i `uc -> -> 64 `i `uc ]
-"98
-[; ;main.c: 98:     I2C1_Write1ByteRegister(0x0E, 0x1B, 0b01000010);
-[e ( _I2C1_Write1ByteRegister (3 , , -> -> 14 `i `uc -> -> 27 `i `uc -> -> 66 `i `uc ]
-"99
-[; ;main.c: 99:     I2C1_Write1ByteRegister(0x0E, 0x1B, 0b11000010);
-[e ( _I2C1_Write1ByteRegister (3 , , -> -> 14 `i `uc -> -> 27 `i `uc -> -> 194 `i `uc ]
-"101
-[; ;main.c: 101:     data = I2C1_Read1ByteRegister(0x0E, 0x1B);
-[e = _data ( _I2C1_Read1ByteRegister (2 , -> -> 14 `i `uc -> -> 27 `i `uc ]
-"102
-[; ;main.c: 102:     data = data + 1;
-[e = _data -> + -> _data `i -> 1 `i `uc ]
-"105
-[; ;main.c: 105:     EPWM1_LoadDutyValue(0);
-[e ( _EPWM1_LoadDutyValue (1 -> -> 0 `i `us ]
-"106
-[; ;main.c: 106:     EPWM2_LoadDutyValue(0);
+[; ;main.c: 60:     EPWM2_LoadDutyValue(0);
 [e ( _EPWM2_LoadDutyValue (1 -> -> 0 `i `us ]
-"107
-[; ;main.c: 107:     PWM4_LoadDutyValue(0);
+"61
+[; ;main.c: 61:     PWM4_LoadDutyValue(0);
 [e ( _PWM4_LoadDutyValue (1 -> -> 0 `i `us ]
-"109
-[; ;main.c: 109:     while (1)
-[e :U 382 ]
-"110
-[; ;main.c: 110:     {
+"63
+[; ;main.c: 63:     uint8_t i;
+[v _i `uc ~T0 @X0 1 a ]
+"66
+[; ;main.c: 66:     for (i=0;i<20;i++)
 {
-"113
-[; ;main.c: 113:         data = I2C1_Read1ByteRegister(0x0E, 0x16);
-[e = _data ( _I2C1_Read1ByteRegister (2 , -> -> 14 `i `uc -> -> 22 `i `uc ]
-"114
-[; ;main.c: 114:         data = data + 1;
-[e = _data -> + -> _data `i -> 1 `i `uc ]
-"115
-[; ;main.c: 115:         data = I2C1_Read1ByteRegister(0x0E, 0x17);
-[e = _data ( _I2C1_Read1ByteRegister (2 , -> -> 14 `i `uc -> -> 23 `i `uc ]
-"116
-[; ;main.c: 116:         data = data + 1;
-[e = _data -> + -> _data `i -> 1 `i `uc ]
-"117
-[; ;main.c: 117:         data = I2C1_Read1ByteRegister(0x0E, 0x18);
-[e = _data ( _I2C1_Read1ByteRegister (2 , -> -> 14 `i `uc -> -> 24 `i `uc ]
-"118
-[; ;main.c: 118:         data = data + 1;
-[e = _data -> + -> _data `i -> 1 `i `uc ]
-"119
-[; ;main.c: 119:         data = I2C1_Read1ByteRegister(0x0E, 0x1A);
-[e = _data ( _I2C1_Read1ByteRegister (2 , -> -> 14 `i `uc -> -> 26 `i `uc ]
-"120
-[; ;main.c: 120:         data = data + 1;
-[e = _data -> + -> _data `i -> 1 `i `uc ]
-"123
-[; ;main.c: 123:         EPWM1_LoadDutyValue(0);
-[e ( _EPWM1_LoadDutyValue (1 -> -> 0 `i `us ]
-"124
-[; ;main.c: 124:         DELAY_milliseconds(1000);
-[e ( _DELAY_milliseconds (1 -> -> 1000 `i `us ]
-"125
-[; ;main.c: 125:         EPWM1_LoadDutyValue(1);
-[e ( _EPWM1_LoadDutyValue (1 -> -> 1 `i `us ]
-"126
-[; ;main.c: 126:         DELAY_milliseconds(1000);
-[e ( _DELAY_milliseconds (1 -> -> 1000 `i `us ]
-"127
-[; ;main.c: 127:         EPWM1_LoadDutyValue(10);
-[e ( _EPWM1_LoadDutyValue (1 -> -> 10 `i `us ]
-"128
-[; ;main.c: 128:         DELAY_milliseconds(1000);
-[e ( _DELAY_milliseconds (1 -> -> 1000 `i `us ]
-"129
-[; ;main.c: 129:         EPWM1_LoadDutyValue(50);
-[e ( _EPWM1_LoadDutyValue (1 -> -> 50 `i `us ]
-"130
-[; ;main.c: 130:         DELAY_milliseconds(1000);
-[e ( _DELAY_milliseconds (1 -> -> 1000 `i `us ]
-"131
-[; ;main.c: 131:         EPWM1_LoadDutyValue(100);
-[e ( _EPWM1_LoadDutyValue (1 -> -> 100 `i `us ]
-"132
-[; ;main.c: 132:         DELAY_milliseconds(1000);
-[e ( _DELAY_milliseconds (1 -> -> 1000 `i `us ]
-"133
-[; ;main.c: 133:         EPWM1_LoadDutyValue(0);
-[e ( _EPWM1_LoadDutyValue (1 -> -> 0 `i `us ]
-"151
-[; ;main.c: 151:         PWM4_LoadDutyValue(0);
-[e ( _PWM4_LoadDutyValue (1 -> -> 0 `i `us ]
-"152
-[; ;main.c: 152:         DELAY_milliseconds(1000);
-[e ( _DELAY_milliseconds (1 -> -> 1000 `i `us ]
-"153
-[; ;main.c: 153:         PWM4_LoadDutyValue(1);
-[e ( _PWM4_LoadDutyValue (1 -> -> 1 `i `us ]
-"154
-[; ;main.c: 154:         DELAY_milliseconds(1000);
-[e ( _DELAY_milliseconds (1 -> -> 1000 `i `us ]
-"155
-[; ;main.c: 155:         PWM4_LoadDutyValue(10);
-[e ( _PWM4_LoadDutyValue (1 -> -> 10 `i `us ]
-"156
-[; ;main.c: 156:         DELAY_milliseconds(1000);
-[e ( _DELAY_milliseconds (1 -> -> 1000 `i `us ]
-"157
-[; ;main.c: 157:         PWM4_LoadDutyValue(50);
-[e ( _PWM4_LoadDutyValue (1 -> -> 50 `i `us ]
-"158
-[; ;main.c: 158:         DELAY_milliseconds(1000);
-[e ( _DELAY_milliseconds (1 -> -> 1000 `i `us ]
-"159
-[; ;main.c: 159:         PWM4_LoadDutyValue(100);
-[e ( _PWM4_LoadDutyValue (1 -> -> 100 `i `us ]
-"160
-[; ;main.c: 160:         DELAY_milliseconds(1000);
-[e ( _DELAY_milliseconds (1 -> -> 1000 `i `us ]
-"161
-[; ;main.c: 161:         PWM4_LoadDutyValue(0);
-[e ( _PWM4_LoadDutyValue (1 -> -> 0 `i `us ]
-"163
-[; ;main.c: 163:         EPWM1_LoadDutyValue(0);
-[e ( _EPWM1_LoadDutyValue (1 -> -> 0 `i `us ]
-"165
-[; ;main.c: 165:         PWM4_LoadDutyValue(0);
-[e ( _PWM4_LoadDutyValue (1 -> -> 0 `i `us ]
-"166
-[; ;main.c: 166:         DELAY_milliseconds(1000);
-[e ( _DELAY_milliseconds (1 -> -> 1000 `i `us ]
-"167
-[; ;main.c: 167:         EPWM1_LoadDutyValue(1);
-[e ( _EPWM1_LoadDutyValue (1 -> -> 1 `i `us ]
-"169
-[; ;main.c: 169:         PWM4_LoadDutyValue(1);
-[e ( _PWM4_LoadDutyValue (1 -> -> 1 `i `us ]
-"170
-[; ;main.c: 170:         DELAY_milliseconds(1000);
-[e ( _DELAY_milliseconds (1 -> -> 1000 `i `us ]
-"171
-[; ;main.c: 171:         EPWM1_LoadDutyValue(10);
-[e ( _EPWM1_LoadDutyValue (1 -> -> 10 `i `us ]
-"173
-[; ;main.c: 173:         PWM4_LoadDutyValue(10);
-[e ( _PWM4_LoadDutyValue (1 -> -> 10 `i `us ]
-"174
-[; ;main.c: 174:         DELAY_milliseconds(1000);
-[e ( _DELAY_milliseconds (1 -> -> 1000 `i `us ]
-"175
-[; ;main.c: 175:         EPWM1_LoadDutyValue(50);
-[e ( _EPWM1_LoadDutyValue (1 -> -> 50 `i `us ]
-"177
-[; ;main.c: 177:         PWM4_LoadDutyValue(50);
-[e ( _PWM4_LoadDutyValue (1 -> -> 50 `i `us ]
-"178
-[; ;main.c: 178:         DELAY_milliseconds(1000);
-[e ( _DELAY_milliseconds (1 -> -> 1000 `i `us ]
-"179
-[; ;main.c: 179:         EPWM1_LoadDutyValue(100);
-[e ( _EPWM1_LoadDutyValue (1 -> -> 100 `i `us ]
-"181
-[; ;main.c: 181:         PWM4_LoadDutyValue(100);
-[e ( _PWM4_LoadDutyValue (1 -> -> 100 `i `us ]
-"182
-[; ;main.c: 182:         DELAY_milliseconds(1000);
-[e ( _DELAY_milliseconds (1 -> -> 1000 `i `us ]
-"183
-[; ;main.c: 183:         EPWM1_LoadDutyValue(0);
-[e ( _EPWM1_LoadDutyValue (1 -> -> 0 `i `us ]
-"185
-[; ;main.c: 185:         PWM4_LoadDutyValue(0);
-[e ( _PWM4_LoadDutyValue (1 -> -> 0 `i `us ]
-"186
-[; ;main.c: 186:     }
-}
-[e :U 381 ]
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 20 `i 381  ]
 [e $U 382  ]
-[e :U 383 ]
-"187
-[; ;main.c: 187: }
+[e :U 381 ]
+"67
+[; ;main.c: 67:     {
+{
+"68
+[; ;main.c: 68:         EPWM1_LoadDutyValue(i);
+[e ( _EPWM1_LoadDutyValue (1 -> _i `us ]
+"69
+[; ;main.c: 69:         DELAY_milliseconds(100);
+[e ( _DELAY_milliseconds (1 -> -> 100 `i `us ]
+"70
+[; ;main.c: 70:     }
+}
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 20 `i 381  ]
+[e :U 382 ]
+}
+"73
+[; ;main.c: 73:     for (i=0;i<20;i++)
+{
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 20 `i 384  ]
+[e $U 385  ]
+[e :U 384 ]
+"74
+[; ;main.c: 74:     {
+{
+"75
+[; ;main.c: 75:         EPWM2_LoadDutyValue(i);
+[e ( _EPWM2_LoadDutyValue (1 -> _i `us ]
+"76
+[; ;main.c: 76:         PWM4_LoadDutyValue(i);
+[e ( _PWM4_LoadDutyValue (1 -> _i `us ]
+"77
+[; ;main.c: 77:         DELAY_milliseconds(100);
+[e ( _DELAY_milliseconds (1 -> -> 100 `i `us ]
+"78
+[; ;main.c: 78:     }
+}
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 20 `i 384  ]
+[e :U 385 ]
+}
+"81
+[; ;main.c: 81:     for (i=20;i<100;i++)
+{
+[e = _i -> -> 20 `i `uc ]
+[e $ < -> _i `i -> 100 `i 387  ]
+[e $U 388  ]
+[e :U 387 ]
+"82
+[; ;main.c: 82:     {
+{
+"83
+[; ;main.c: 83:         EPWM1_LoadDutyValue(i);
+[e ( _EPWM1_LoadDutyValue (1 -> _i `us ]
+"84
+[; ;main.c: 84:         EPWM2_LoadDutyValue(i);
+[e ( _EPWM2_LoadDutyValue (1 -> _i `us ]
+"85
+[; ;main.c: 85:         PWM4_LoadDutyValue(i);
+[e ( _PWM4_LoadDutyValue (1 -> _i `us ]
+"86
+[; ;main.c: 86:         DELAY_milliseconds(10);
+[e ( _DELAY_milliseconds (1 -> -> 10 `i `us ]
+"87
+[; ;main.c: 87:     }
+}
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 100 `i 387  ]
+[e :U 388 ]
+}
+"89
+[; ;main.c: 89:     DELAY_milliseconds(3000);
+[e ( _DELAY_milliseconds (1 -> -> 3000 `i `us ]
+"92
+[; ;main.c: 92:     for (i=100;i>1;i--)
+{
+[e = _i -> -> 100 `i `uc ]
+[e $ > -> _i `i -> 1 `i 390  ]
+[e $U 391  ]
+[e :U 390 ]
+"93
+[; ;main.c: 93:     {
+{
+"94
+[; ;main.c: 94:         EPWM1_LoadDutyValue(i);
+[e ( _EPWM1_LoadDutyValue (1 -> _i `us ]
+"95
+[; ;main.c: 95:         EPWM2_LoadDutyValue(i);
+[e ( _EPWM2_LoadDutyValue (1 -> _i `us ]
+"96
+[; ;main.c: 96:         PWM4_LoadDutyValue(i);
+[e ( _PWM4_LoadDutyValue (1 -> _i `us ]
+"97
+[; ;main.c: 97:         DELAY_milliseconds(10);
+[e ( _DELAY_milliseconds (1 -> -> 10 `i `us ]
+"98
+[; ;main.c: 98:     }
+}
+[e -- _i -> -> 1 `i `uc ]
+[e $ > -> _i `i -> 1 `i 390  ]
+[e :U 391 ]
+}
+"99
+[; ;main.c: 99:     EPWM1_LoadDutyValue(0);
+[e ( _EPWM1_LoadDutyValue (1 -> -> 0 `i `us ]
+"100
+[; ;main.c: 100:     EPWM2_LoadDutyValue(0);
+[e ( _EPWM2_LoadDutyValue (1 -> -> 0 `i `us ]
+"101
+[; ;main.c: 101:     PWM4_LoadDutyValue(0);
+[e ( _PWM4_LoadDutyValue (1 -> -> 0 `i `us ]
+"102
+[; ;main.c: 102: }
 [e :UE 380 ]
 }
-"190
-[; ;main.c: 190: void WakeUpInterrupt(void){
+[v $root$_main `(v ~T0 @X0 0 e ]
+"107
+[; ;main.c: 107: void main(void)
+[v _main `(v ~T0 @X0 1 ef ]
+"108
+[; ;main.c: 108: {
+{
+[e :U _main ]
+[f ]
+"110
+[; ;main.c: 110:     SYSTEM_Initialize();
+[e ( _SYSTEM_Initialize ..  ]
+"113
+[; ;main.c: 113:     INT_SetInterruptHandler(WakeUpInterrupt);
+[e ( _INT_SetInterruptHandler (1 &U _WakeUpInterrupt ]
+"114
+[; ;main.c: 114:     IOCBF7_SetInterruptHandler(ButtonInterrupt);
+[e ( _IOCBF7_SetInterruptHandler (1 &U _ButtonInterrupt ]
+"115
+[; ;main.c: 115:     TMR4_SetInterruptHandler(TimerInterrupt);
+[e ( _TMR4_SetInterruptHandler (1 &U _TimerInterrupt ]
+"121
+[; ;main.c: 121:     (INTCONbits.GIE = 1);
+[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
+"124
+[; ;main.c: 124:     (INTCONbits.PEIE = 1);
+[e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
+"135
+[; ;main.c: 135:     I2C1_Write1ByteRegister(0x0E, 0x1D, 0b10000000);
+[e ( _I2C1_Write1ByteRegister (3 , , -> -> 14 `i `uc -> -> 29 `i `uc -> -> 128 `i `uc ]
+"136
+[; ;main.c: 136:     DELAY_milliseconds(1000);
+[e ( _DELAY_milliseconds (1 -> -> 1000 `i `us ]
+"138
+[; ;main.c: 138:     uint8_t data;
+[v _data `uc ~T0 @X0 1 a ]
+"139
+[; ;main.c: 139:     data = I2C1_Read1ByteRegister(0x0E, 0x0F);
+[e = _data ( _I2C1_Read1ByteRegister (2 , -> -> 14 `i `uc -> -> 15 `i `uc ]
+"142
+[; ;main.c: 142:     I2C1_Write1ByteRegister(0x0E, 0x1E, 0b00101000);
+[e ( _I2C1_Write1ByteRegister (3 , , -> -> 14 `i `uc -> -> 30 `i `uc -> -> 40 `i `uc ]
+"143
+[; ;main.c: 143:     I2C1_Write1ByteRegister(0x0E, 0x1F, 0b10111111);
+[e ( _I2C1_Write1ByteRegister (3 , , -> -> 14 `i `uc -> -> 31 `i `uc -> -> 191 `i `uc ]
+"144
+[; ;main.c: 144:     I2C1_Write1ByteRegister(0x0E, 0x1B, 0b00000000);
+[e ( _I2C1_Write1ByteRegister (3 , , -> -> 14 `i `uc -> -> 27 `i `uc -> -> 0 `i `uc ]
+"145
+[; ;main.c: 145:     I2C1_Write1ByteRegister(0x0E, 0x1B, 0b00000010);
+[e ( _I2C1_Write1ByteRegister (3 , , -> -> 14 `i `uc -> -> 27 `i `uc -> -> 2 `i `uc ]
+"146
+[; ;main.c: 146:     I2C1_Write1ByteRegister(0x0E, 0x1B, 0b10000010);
+[e ( _I2C1_Write1ByteRegister (3 , , -> -> 14 `i `uc -> -> 27 `i `uc -> -> 130 `i `uc ]
+"148
+[; ;main.c: 148:     data = I2C1_Read1ByteRegister(0x0E, 0x1B);
+[e = _data ( _I2C1_Read1ByteRegister (2 , -> -> 14 `i `uc -> -> 27 `i `uc ]
+"151
+[; ;main.c: 151:     EPWM1_LoadDutyValue(0);
+[e ( _EPWM1_LoadDutyValue (1 -> -> 0 `i `us ]
+"152
+[; ;main.c: 152:     EPWM2_LoadDutyValue(0);
+[e ( _EPWM2_LoadDutyValue (1 -> -> 0 `i `us ]
+"153
+[; ;main.c: 153:     PWM4_LoadDutyValue(0);
+[e ( _PWM4_LoadDutyValue (1 -> -> 0 `i `us ]
+"157
+[; ;main.c: 157:     int8_t data_x;
+[v _data_x `c ~T0 @X0 1 a ]
+"158
+[; ;main.c: 158:     int8_t data_y;
+[v _data_y `c ~T0 @X0 1 a ]
+"159
+[; ;main.c: 159:     int8_t data_z;
+[v _data_z `c ~T0 @X0 1 a ]
+"161
+[; ;main.c: 161:     while (1)
+[e :U 395 ]
+"162
+[; ;main.c: 162:     {
+{
+"164
+[; ;main.c: 164:         data_x = I2C1_Read1ByteRegister(0x0E, 0x07);
+[e = _data_x -> ( _I2C1_Read1ByteRegister (2 , -> -> 14 `i `uc -> -> 7 `i `uc `c ]
+"165
+[; ;main.c: 165:         data_y = I2C1_Read1ByteRegister(0x0E, 0x09);
+[e = _data_y -> ( _I2C1_Read1ByteRegister (2 , -> -> 14 `i `uc -> -> 9 `i `uc `c ]
+"166
+[; ;main.c: 166:         data_z = I2C1_Read1ByteRegister(0x0E, 0x0B);
+[e = _data_z -> ( _I2C1_Read1ByteRegister (2 , -> -> 14 `i `uc -> -> 11 `i `uc `c ]
+"168
+[; ;main.c: 168:         if (data_x > 0)
+[e $ ! > -> _data_x `i -> 0 `i 397  ]
+"169
+[; ;main.c: 169:             EPWM1_LoadDutyValue(data_x);
+[e ( _EPWM1_LoadDutyValue (1 -> -> _data_x `s `us ]
+[e $U 398  ]
+"170
+[; ;main.c: 170:         else
+[e :U 397 ]
+"171
+[; ;main.c: 171:             EPWM1_LoadDutyValue(data_x * (-1));
+[e ( _EPWM1_LoadDutyValue (1 -> * -> _data_x `i -U -> 1 `i `us ]
+[e :U 398 ]
+"173
+[; ;main.c: 173:         if (data_y > 0)
+[e $ ! > -> _data_y `i -> 0 `i 399  ]
+"174
+[; ;main.c: 174:             EPWM2_LoadDutyValue(data_y);
+[e ( _EPWM2_LoadDutyValue (1 -> -> _data_y `s `us ]
+[e $U 400  ]
+"175
+[; ;main.c: 175:         else
+[e :U 399 ]
+"176
+[; ;main.c: 176:             EPWM2_LoadDutyValue(data_y * (-1));
+[e ( _EPWM2_LoadDutyValue (1 -> * -> _data_y `i -U -> 1 `i `us ]
+[e :U 400 ]
+"178
+[; ;main.c: 178:         if (data_z > 0)
+[e $ ! > -> _data_z `i -> 0 `i 401  ]
+"179
+[; ;main.c: 179:             PWM4_LoadDutyValue(data_z);
+[e ( _PWM4_LoadDutyValue (1 -> -> _data_z `s `us ]
+[e $U 402  ]
+"180
+[; ;main.c: 180:         else
+[e :U 401 ]
+"181
+[; ;main.c: 181:             PWM4_LoadDutyValue(data_z * (-1));
+[e ( _PWM4_LoadDutyValue (1 -> * -> _data_z `i -U -> 1 `i `us ]
+[e :U 402 ]
+"182
+[; ;main.c: 182:     }
+}
+[e :U 394 ]
+[e $U 395  ]
+[e :U 396 ]
+"183
+[; ;main.c: 183: }
+[e :UE 393 ]
+}
+"186
+[; ;main.c: 186: void WakeUpInterrupt(void){
 [v _WakeUpInterrupt `(v ~T0 @X0 1 ef ]
 {
 [e :U _WakeUpInterrupt ]
 [f ]
-"191
-[; ;main.c: 191:     EPWM2_LoadDutyValue(intensity_red + 10);
-[e ( _EPWM2_LoadDutyValue (1 -> + -> _intensity_red `i -> 10 `i `us ]
-"192
-[; ;main.c: 192: }
-[e :UE 384 ]
+"188
+[; ;main.c: 188: }
+[e :UE 403 ]
 }
-"195
-[; ;main.c: 195: void ButtonInterrupt(void){
+"191
+[; ;main.c: 191: void ButtonInterrupt(void){
 [v _ButtonInterrupt `(v ~T0 @X0 1 ef ]
 {
 [e :U _ButtonInterrupt ]
 [f ]
+"192
+[; ;main.c: 192:     patronus();
+[e ( _patronus ..  ]
+"193
+[; ;main.c: 193: }
+[e :UE 404 ]
+}
 "196
-[; ;main.c: 196:     EPWM2_LoadDutyValue(intensity_red + 10);
-[e ( _EPWM2_LoadDutyValue (1 -> + -> _intensity_red `i -> 10 `i `us ]
+[; ;main.c: 196: void TimerInterrupt(void)
+[v _TimerInterrupt `(v ~T0 @X0 1 ef ]
 "197
-[; ;main.c: 197: }
-[e :UE 385 ]
+[; ;main.c: 197: {
+{
+[e :U _TimerInterrupt ]
+[f ]
+"198
+[; ;main.c: 198:     TMR4_StopTimer();
+[e ( _TMR4_StopTimer ..  ]
+"199
+[; ;main.c: 199: }
+[e :UE 405 ]
 }

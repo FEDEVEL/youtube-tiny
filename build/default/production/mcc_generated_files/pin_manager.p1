@@ -103,11 +103,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1829.h: 6185: extern volatile IOCBPbits_t IOCBPbits __attribute__((address(0x394)));
 [v _IOCBPbits `VS319 ~T0 @X0 0 e@916 ]
 [v F2591 `(v ~T0 @X0 0 tf ]
-"217 mcc_generated_files/pin_manager.h
-[; ;mcc_generated_files/pin_manager.h: 217: void IOCBF7_SetInterruptHandler(void (* InterruptHandler)(void));
+"208 mcc_generated_files/pin_manager.h
+[; ;mcc_generated_files/pin_manager.h: 208: void IOCBF7_SetInterruptHandler(void (* InterruptHandler)(void));
 [v _IOCBF7_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F2591 ]
-"265
-[; ;mcc_generated_files/pin_manager.h: 265: void IOCBF7_DefaultInterruptHandler(void);
+"256
+[; ;mcc_generated_files/pin_manager.h: 256: void IOCBF7_DefaultInterruptHandler(void);
 [v _IOCBF7_DefaultInterruptHandler `(v ~T0 @X0 0 ef ]
 "357 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1829.h
 [; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1829.h: 357:     struct {
@@ -124,8 +124,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "374
 [; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1829.h: 374: extern volatile INTCONbits_t INTCONbits __attribute__((address(0x00B)));
 [v _INTCONbits `VS30 ~T0 @X0 0 e@11 ]
-"194 mcc_generated_files/pin_manager.h
-[; ;mcc_generated_files/pin_manager.h: 194: void IOCBF7_ISR(void);
+"185 mcc_generated_files/pin_manager.h
+[; ;mcc_generated_files/pin_manager.h: 185: void IOCBF7_ISR(void);
 [v _IOCBF7_ISR `(v ~T0 @X0 0 ef ]
 [v F2603 `(v ~T0 @X0 0 tf ]
 [v F2605 `(v ~T0 @X0 0 tf ]
@@ -682,8 +682,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/pin_manager.c: 86:     OPTION_REGbits.nWPUEN = 0;
 [e = . . _OPTION_REGbits 0 7 -> -> 0 `i `uc ]
 "92
-[; ;mcc_generated_files/pin_manager.c: 92:     APFCON0 = 0x00;
-[e = _APFCON0 -> -> 0 `i `uc ]
+[; ;mcc_generated_files/pin_manager.c: 92:     APFCON0 = 0x04;
+[e = _APFCON0 -> -> 4 `i `uc ]
 "93
 [; ;mcc_generated_files/pin_manager.c: 93:     APFCON1 = 0x00;
 [e = _APFCON1 -> -> 0 `i `uc ]

@@ -4516,17 +4516,17 @@ extern __bank0 __bit __timeout;
 # 50 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/pin_manager.h" 1
-# 169 "./mcc_generated_files/pin_manager.h"
+# 160 "./mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
-# 181 "./mcc_generated_files/pin_manager.h"
+# 172 "./mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
-# 194 "./mcc_generated_files/pin_manager.h"
+# 185 "./mcc_generated_files/pin_manager.h"
 void IOCBF7_ISR(void);
-# 217 "./mcc_generated_files/pin_manager.h"
+# 208 "./mcc_generated_files/pin_manager.h"
 void IOCBF7_SetInterruptHandler(void (* InterruptHandler)(void));
-# 241 "./mcc_generated_files/pin_manager.h"
+# 232 "./mcc_generated_files/pin_manager.h"
 extern void (*IOCBF7_InterruptHandler)(void);
-# 265 "./mcc_generated_files/pin_manager.h"
+# 256 "./mcc_generated_files/pin_manager.h"
 void IOCBF7_DefaultInterruptHandler(void);
 # 51 "./mcc_generated_files/mcc.h" 2
 
@@ -4865,6 +4865,31 @@ void I2C1_SetDataNackCallback(i2c1_callback_t cb, void *ptr);
 void I2C1_SetTimeoutCallback(i2c1_callback_t cb, void *ptr);
 # 56 "./mcc_generated_files/mcc.h" 2
 
+# 1 "./mcc_generated_files/tmr4.h" 1
+# 104 "./mcc_generated_files/tmr4.h"
+void TMR4_Initialize(void);
+# 133 "./mcc_generated_files/tmr4.h"
+void TMR4_StartTimer(void);
+# 165 "./mcc_generated_files/tmr4.h"
+void TMR4_StopTimer(void);
+# 200 "./mcc_generated_files/tmr4.h"
+uint8_t TMR4_ReadTimer(void);
+# 239 "./mcc_generated_files/tmr4.h"
+void TMR4_WriteTimer(uint8_t timerVal);
+# 291 "./mcc_generated_files/tmr4.h"
+void TMR4_LoadPeriodRegister(uint8_t periodVal);
+# 309 "./mcc_generated_files/tmr4.h"
+void TMR4_ISR(void);
+# 327 "./mcc_generated_files/tmr4.h"
+ void TMR4_CallBack(void);
+# 344 "./mcc_generated_files/tmr4.h"
+ void TMR4_SetInterruptHandler(void (* InterruptHandler)(void));
+# 362 "./mcc_generated_files/tmr4.h"
+extern void (*TMR4_InterruptHandler)(void);
+# 380 "./mcc_generated_files/tmr4.h"
+void TMR4_DefaultInterruptHandler(void);
+# 57 "./mcc_generated_files/mcc.h" 2
+
 # 1 "./mcc_generated_files/tmr2.h" 1
 # 103 "./mcc_generated_files/tmr2.h"
 void TMR2_Initialize(void);
@@ -4880,28 +4905,28 @@ void TMR2_WriteTimer(uint8_t timerVal);
 void TMR2_LoadPeriodRegister(uint8_t periodVal);
 # 325 "./mcc_generated_files/tmr2.h"
 _Bool TMR2_HasOverflowOccured(void);
-# 57 "./mcc_generated_files/mcc.h" 2
+# 58 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/pwm4.h" 1
 # 97 "./mcc_generated_files/pwm4.h"
 void PWM4_Initialize(void);
 # 124 "./mcc_generated_files/pwm4.h"
 void PWM4_LoadDutyValue(uint16_t dutyValue);
-# 58 "./mcc_generated_files/mcc.h" 2
+# 59 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/epwm2.h" 1
 # 96 "./mcc_generated_files/epwm2.h"
 void EPWM2_Initialize(void);
 # 122 "./mcc_generated_files/epwm2.h"
 void EPWM2_LoadDutyValue(uint16_t dutyValue);
-# 59 "./mcc_generated_files/mcc.h" 2
+# 60 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/epwm1.h" 1
 # 96 "./mcc_generated_files/epwm1.h"
 void EPWM1_Initialize(void);
 # 122 "./mcc_generated_files/epwm1.h"
 void EPWM1_LoadDutyValue(uint16_t dutyValue);
-# 60 "./mcc_generated_files/mcc.h" 2
+# 61 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/memory.h" 1
 # 99 "./mcc_generated_files/memory.h"
@@ -4916,7 +4941,7 @@ void FLASH_EraseBlock(uint16_t startAddr);
 void DATAEE_WriteByte(uint8_t bAdd, uint8_t bData);
 # 246 "./mcc_generated_files/memory.h"
 uint8_t DATAEE_ReadByte(uint8_t bAdd);
-# 61 "./mcc_generated_files/mcc.h" 2
+# 62 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/ext_int.h" 1
 # 250 "./mcc_generated_files/ext_int.h"
@@ -4931,18 +4956,18 @@ void INT_SetInterruptHandler(void (* InterruptHandler)(void));
 extern void (*INT_InterruptHandler)(void);
 # 367 "./mcc_generated_files/ext_int.h"
 void INT_DefaultInterruptHandler(void);
-# 62 "./mcc_generated_files/mcc.h" 2
+# 63 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/delay.h" 1
 # 34 "./mcc_generated_files/delay.h"
 void DELAY_milliseconds(uint16_t milliseconds);
 void DELAY_microseconds(uint16_t microseconds);
-# 63 "./mcc_generated_files/mcc.h" 2
-# 78 "./mcc_generated_files/mcc.h"
+# 64 "./mcc_generated_files/mcc.h" 2
+# 79 "./mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
-# 91 "./mcc_generated_files/mcc.h"
+# 92 "./mcc_generated_files/mcc.h"
 void OSCILLATOR_Initialize(void);
-# 103 "./mcc_generated_files/mcc.h"
+# 104 "./mcc_generated_files/mcc.h"
 void WDT_Initialize(void);
 # 43 "main.c" 2
 
@@ -4960,11 +4985,61 @@ void I2C1_ReadDataBlock(i2c1_address_t address, uint8_t reg, uint8_t *data, size
 
 
 
-
 void WakeUpInterrupt(void);
 void ButtonInterrupt(void);
+void TimerInterrupt(void);
 
-extern uint8_t intensity_red = 0;
+
+
+
+
+
+void patronus(void)
+{
+    EPWM1_LoadDutyValue(0);
+    EPWM2_LoadDutyValue(0);
+    PWM4_LoadDutyValue(0);
+
+    uint8_t i;
+
+
+    for (i=0;i<20;i++)
+    {
+        EPWM1_LoadDutyValue(i);
+        DELAY_milliseconds(100);
+    }
+
+
+    for (i=0;i<20;i++)
+    {
+        EPWM2_LoadDutyValue(i);
+        PWM4_LoadDutyValue(i);
+        DELAY_milliseconds(100);
+    }
+
+
+    for (i=20;i<100;i++)
+    {
+        EPWM1_LoadDutyValue(i);
+        EPWM2_LoadDutyValue(i);
+        PWM4_LoadDutyValue(i);
+        DELAY_milliseconds(10);
+    }
+
+    DELAY_milliseconds(3000);
+
+
+    for (i=100;i>1;i--)
+    {
+        EPWM1_LoadDutyValue(i);
+        EPWM2_LoadDutyValue(i);
+        PWM4_LoadDutyValue(i);
+        DELAY_milliseconds(10);
+    }
+    EPWM1_LoadDutyValue(0);
+    EPWM2_LoadDutyValue(0);
+    PWM4_LoadDutyValue(0);
+}
 
 
 
@@ -4975,15 +5050,9 @@ void main(void)
     SYSTEM_Initialize();
 
 
-
     INT_SetInterruptHandler(WakeUpInterrupt);
-    (OPTION_REGbits.INTEDG = 0);
-    (INTCONbits.INTF = 0);
-    (INTCONbits.INTE = 1);
-
-
-
     IOCBF7_SetInterruptHandler(ButtonInterrupt);
+    TMR4_SetInterruptHandler(TimerInterrupt);
 
 
 
@@ -4993,87 +5062,69 @@ void main(void)
 
 
     (INTCONbits.PEIE = 1);
-
-
-
-
-
-
+# 135 "main.c"
+    I2C1_Write1ByteRegister(0x0E, 0x1D, 0b10000000);
+    DELAY_milliseconds(1000);
 
     uint8_t data;
     data = I2C1_Read1ByteRegister(0x0E, 0x0F);
-    data = data + 1;
+
 
     I2C1_Write1ByteRegister(0x0E, 0x1E, 0b00101000);
-    I2C1_Write1ByteRegister(0x0E, 0x1B, 0b10000001);
+    I2C1_Write1ByteRegister(0x0E, 0x1F, 0b10111111);
+    I2C1_Write1ByteRegister(0x0E, 0x1B, 0b00000000);
+    I2C1_Write1ByteRegister(0x0E, 0x1B, 0b00000010);
+    I2C1_Write1ByteRegister(0x0E, 0x1B, 0b10000010);
+
+    data = I2C1_Read1ByteRegister(0x0E, 0x1B);
+
 
     EPWM1_LoadDutyValue(0);
     EPWM2_LoadDutyValue(0);
     PWM4_LoadDutyValue(0);
 
+
+
+    int8_t data_x;
+    int8_t data_y;
+    int8_t data_z;
+
     while (1)
     {
 
+        data_x = I2C1_Read1ByteRegister(0x0E, 0x07);
+        data_y = I2C1_Read1ByteRegister(0x0E, 0x09);
+        data_z = I2C1_Read1ByteRegister(0x0E, 0x0B);
 
-        data = I2C1_Read1ByteRegister(0x0E, 0x18);
+        if (data_x > 0)
+            EPWM1_LoadDutyValue(data_x);
+        else
+            EPWM1_LoadDutyValue(data_x * (-1));
 
+        if (data_y > 0)
+            EPWM2_LoadDutyValue(data_y);
+        else
+            EPWM2_LoadDutyValue(data_y * (-1));
 
-        EPWM1_LoadDutyValue(0);
-        DELAY_milliseconds(1000);
-        EPWM1_LoadDutyValue(1);
-        DELAY_milliseconds(1000);
-        EPWM1_LoadDutyValue(10);
-        DELAY_milliseconds(1000);
-        EPWM1_LoadDutyValue(50);
-        DELAY_milliseconds(1000);
-        EPWM1_LoadDutyValue(100);
-        DELAY_milliseconds(1000);
-        EPWM1_LoadDutyValue(0);
-# 134 "main.c"
-        PWM4_LoadDutyValue(0);
-        DELAY_milliseconds(1000);
-        PWM4_LoadDutyValue(1);
-        DELAY_milliseconds(1000);
-        PWM4_LoadDutyValue(10);
-        DELAY_milliseconds(1000);
-        PWM4_LoadDutyValue(50);
-        DELAY_milliseconds(1000);
-        PWM4_LoadDutyValue(100);
-        DELAY_milliseconds(1000);
-        PWM4_LoadDutyValue(0);
-
-        EPWM1_LoadDutyValue(0);
-
-        PWM4_LoadDutyValue(0);
-        DELAY_milliseconds(1000);
-        EPWM1_LoadDutyValue(1);
-
-        PWM4_LoadDutyValue(1);
-        DELAY_milliseconds(1000);
-        EPWM1_LoadDutyValue(10);
-
-        PWM4_LoadDutyValue(10);
-        DELAY_milliseconds(1000);
-        EPWM1_LoadDutyValue(50);
-
-        PWM4_LoadDutyValue(50);
-        DELAY_milliseconds(1000);
-        EPWM1_LoadDutyValue(100);
-
-        PWM4_LoadDutyValue(100);
-        DELAY_milliseconds(1000);
-        EPWM1_LoadDutyValue(0);
-
-        PWM4_LoadDutyValue(0);
+        if (data_z > 0)
+            PWM4_LoadDutyValue(data_z);
+        else
+            PWM4_LoadDutyValue(data_z * (-1));
     }
 }
 
 
 void WakeUpInterrupt(void){
-    EPWM2_LoadDutyValue(intensity_red + 10);
+
 }
 
 
 void ButtonInterrupt(void){
-    EPWM2_LoadDutyValue(intensity_red + 10);
+    patronus();
+}
+
+
+void TimerInterrupt(void)
+{
+    TMR4_StopTimer();
 }

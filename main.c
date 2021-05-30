@@ -45,11 +45,61 @@
 
 #define KXTJ3_I2C_ADDR 0x0E
 
-
 void WakeUpInterrupt(void);
 void ButtonInterrupt(void);
+void TimerInterrupt(void);
 
-extern uint8_t intensity_red = 0;
+//extern uint8_t intensity_red = 0;
+//extern uint8_t intensity_green = 0;
+//extern uint8_t intensity_blue = 0;
+
+//Simple LED effect
+void patronus(void)
+{
+    EPWM1_LoadDutyValue(0); //BLUE
+    EPWM2_LoadDutyValue(0); //RED
+    PWM4_LoadDutyValue(0); //GREEN
+    
+    uint8_t i;
+    
+    //start with blue
+    for (i=0;i<20;i++)
+    {
+        EPWM1_LoadDutyValue(i);
+        DELAY_milliseconds(100);
+    }
+    
+    //change to white
+    for (i=0;i<20;i++)
+    {
+        EPWM2_LoadDutyValue(i);
+        PWM4_LoadDutyValue(i);
+        DELAY_milliseconds(100);
+    }      
+    
+    //go to the full white intensity
+    for (i=20;i<100;i++)
+    {
+        EPWM1_LoadDutyValue(i); //BLUE
+        EPWM2_LoadDutyValue(i); //RED
+        PWM4_LoadDutyValue(i); //GREEN 
+        DELAY_milliseconds(10);
+    }    
+    
+    DELAY_milliseconds(3000); //full brightness for 3s
+    
+    //slowly turn off the LEDs
+    for (i=100;i>1;i--)
+    {
+        EPWM1_LoadDutyValue(i); //BLUE
+        EPWM2_LoadDutyValue(i); //RED
+        PWM4_LoadDutyValue(i); //GREEN 
+        DELAY_milliseconds(10);
+    }        
+    EPWM1_LoadDutyValue(0); //BLUE
+    EPWM2_LoadDutyValue(0); //RED
+    PWM4_LoadDutyValue(0); //GREEN    
+}
 
 /*
                          Main application
@@ -59,16 +109,10 @@ void main(void)
     // initialize the device
     SYSTEM_Initialize();
 
-    //Set Weakup Interrupt
-    //EXT_INT_Initialize();
-    INT_SetInterruptHandler(WakeUpInterrupt);     //Register the interrupt Handler    
-    //EXT_INT_fallingEdgeSet(); //set the edge
-    //EXT_INT_InterruptFlagClear(); //clear the flag
-    //EXT_INT_InterruptEnable(); //enable interrupt 
-    
-    //Set Button Interrupt
-    //PIN_MANAGER_Initialize();
-    IOCBF7_SetInterruptHandler(ButtonInterrupt);
+    //Handle interrupts
+    INT_SetInterruptHandler(WakeUpInterrupt); //Set Weakup Interrupt from accelerometer handler   
+    IOCBF7_SetInterruptHandler(ButtonInterrupt); //Set Button Interrupt handler
+    TMR4_SetInterruptHandler(TimerInterrupt); //Set Timer interrupt handler
     
     // When using interrupts, you need to set the Global and Peripheral Interrupt Enable bits
     // Use the following macros to:
@@ -84,117 +128,76 @@ void main(void)
 
     // Disable the Peripheral Interrupts
     //INTERRUPT_PeripheralInterruptDisable();
-    
-    I2C1_Write1ByteRegister(KXTJ3_I2C_ADDR, 0x1D, 0b10000000); //reset
-    DELAY_milliseconds(1000);
+
+    //initialize accelerometer
+    //this still needs to be adjusted, this code doesnt follow the recommended start up sequence
+    // read more here: https://kionixfs.azureedge.net/en/document/TN017-Power-On-Procedure.pdf
+    I2C1_Write1ByteRegister(KXTJ3_I2C_ADDR, 0x1D, 0b10000000); // reset acceletometer
+    DELAY_milliseconds(1000); //wait until the reset sequence is finished
     
     uint8_t data;
-    data = I2C1_Read1ByteRegister(KXTJ3_I2C_ADDR, 0x0F);
-    data = data + 1;
+    data = I2C1_Read1ByteRegister(KXTJ3_I2C_ADDR, 0x0F); // Read accelerometer ID, it suppose to be 0x35
     
+    //set registers for what we need to test
     I2C1_Write1ByteRegister(KXTJ3_I2C_ADDR, 0x1E, 0b00101000);
     I2C1_Write1ByteRegister(KXTJ3_I2C_ADDR, 0x1F, 0b10111111);    
-    I2C1_Write1ByteRegister(KXTJ3_I2C_ADDR, 0x1B, 0b01000000);    
-    I2C1_Write1ByteRegister(KXTJ3_I2C_ADDR, 0x1B, 0b01000010);
-    I2C1_Write1ByteRegister(KXTJ3_I2C_ADDR, 0x1B, 0b11000010); 
+    I2C1_Write1ByteRegister(KXTJ3_I2C_ADDR, 0x1B, 0b00000000);    
+    I2C1_Write1ByteRegister(KXTJ3_I2C_ADDR, 0x1B, 0b00000010);
+    I2C1_Write1ByteRegister(KXTJ3_I2C_ADDR, 0x1B, 0b10000010); 
     
-    data = I2C1_Read1ByteRegister(KXTJ3_I2C_ADDR, 0x1B);
-    data = data + 1;
+    data = I2C1_Read1ByteRegister(KXTJ3_I2C_ADDR, 0x1B); //read this register to clear interrupts
     
-    
+    //Turn OFF all the LEDs
     EPWM1_LoadDutyValue(0);
     EPWM2_LoadDutyValue(0);
     PWM4_LoadDutyValue(0);
-        
+    
+    //TMR4_StartTimer(); for future use  
+    
+    int8_t data_x;
+    int8_t data_y;
+    int8_t data_z;
+    
     while (1)
     {
-        // Add your application code
+        //test code - turns on different LED color when PCB is oriented different ways
+        data_x = I2C1_Read1ByteRegister(KXTJ3_I2C_ADDR, 0x07);
+        data_y = I2C1_Read1ByteRegister(KXTJ3_I2C_ADDR, 0x09);
+        data_z = I2C1_Read1ByteRegister(KXTJ3_I2C_ADDR, 0x0B);
+        
+        if (data_x > 0)
+            EPWM1_LoadDutyValue(data_x);
+        else
+            EPWM1_LoadDutyValue(data_x * (-1));
 
-        data = I2C1_Read1ByteRegister(KXTJ3_I2C_ADDR, 0x16);
-        data = data + 1;
-        data = I2C1_Read1ByteRegister(KXTJ3_I2C_ADDR, 0x17);          
-        data = data + 1;
-        data = I2C1_Read1ByteRegister(KXTJ3_I2C_ADDR, 0x18);
-        data = data + 1;
-        data = I2C1_Read1ByteRegister(KXTJ3_I2C_ADDR, 0x1A); //clear interrupt
-        data = data + 1;        
-    
-        //BLUE
-        EPWM1_LoadDutyValue(0);
-        DELAY_milliseconds(1000);         
-        EPWM1_LoadDutyValue(1);
-        DELAY_milliseconds(1000);        
-        EPWM1_LoadDutyValue(10);
-        DELAY_milliseconds(1000);  
-        EPWM1_LoadDutyValue(50);
-        DELAY_milliseconds(1000);        
-        EPWM1_LoadDutyValue(100);
-        DELAY_milliseconds(1000);  
-        EPWM1_LoadDutyValue(0);        
+        if (data_y > 0)
+            EPWM2_LoadDutyValue(data_y);
+        else
+            EPWM2_LoadDutyValue(data_y * (-1));
         
-        //RED LED
-        /*
-        EPWM2_LoadDutyValue(0);
-        DELAY_milliseconds(1000);         
-        EPWM2_LoadDutyValue(1);
-        DELAY_milliseconds(1000);        
-        EPWM2_LoadDutyValue(10);
-        DELAY_milliseconds(1000);  
-        EPWM2_LoadDutyValue(50);
-        DELAY_milliseconds(1000);        
-        EPWM2_LoadDutyValue(100);
-        DELAY_milliseconds(1000);
-        EPWM2_LoadDutyValue(0); 
-         */
-        
-        //GREEN
-        PWM4_LoadDutyValue(0);
-        DELAY_milliseconds(1000);         
-        PWM4_LoadDutyValue(1);
-        DELAY_milliseconds(1000);        
-        PWM4_LoadDutyValue(10);
-        DELAY_milliseconds(1000);  
-        PWM4_LoadDutyValue(50);
-        DELAY_milliseconds(1000);        
-        PWM4_LoadDutyValue(100);
-        DELAY_milliseconds(1000); 
-        PWM4_LoadDutyValue(0);        
-        
-        EPWM1_LoadDutyValue(0);
-        //EPWM2_LoadDutyValue(0);
-        PWM4_LoadDutyValue(0);
-        DELAY_milliseconds(1000);  
-        EPWM1_LoadDutyValue(1);
-        //EPWM2_LoadDutyValue(1);        
-        PWM4_LoadDutyValue(1);
-        DELAY_milliseconds(1000);   
-        EPWM1_LoadDutyValue(10);
-        //EPWM2_LoadDutyValue(10);        
-        PWM4_LoadDutyValue(10);
-        DELAY_milliseconds(1000); 
-        EPWM1_LoadDutyValue(50);
-        //EPWM2_LoadDutyValue(50);        
-        PWM4_LoadDutyValue(50);
-        DELAY_milliseconds(1000);
-        EPWM1_LoadDutyValue(100);
-        //EPWM2_LoadDutyValue(100);        
-        PWM4_LoadDutyValue(100);
-        DELAY_milliseconds(1000); 
-        EPWM1_LoadDutyValue(0);
-        //EPWM2_LoadDutyValue(0);         
-        PWM4_LoadDutyValue(0);        
+        if (data_z > 0)
+            PWM4_LoadDutyValue(data_z);
+        else
+            PWM4_LoadDutyValue(data_z * (-1));           
     }
 }
 
 //Wakeup Interrupt handler
 void WakeUpInterrupt(void){
-    EPWM2_LoadDutyValue(intensity_red + 10);
+    //when accelerometer detects a movement, wake up the MCU
 }
 
 //Button Interrupt handler
 void ButtonInterrupt(void){
-    EPWM2_LoadDutyValue(intensity_red + 10);
+    patronus(); //test a LED effect when button is pressed
 }
+
+//Timer Interrupt handler
+void TimerInterrupt(void)
+{
+    TMR4_StopTimer(); //after timer reaches 0, stop it
+}
+
 /**
  End of File
 */

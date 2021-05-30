@@ -4511,17 +4511,17 @@ extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 28 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\\pic\\include\\xc.h" 2 3
 # 54 "mcc_generated_files/pin_manager.h" 2
-# 169 "mcc_generated_files/pin_manager.h"
+# 160 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
-# 181 "mcc_generated_files/pin_manager.h"
+# 172 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
-# 194 "mcc_generated_files/pin_manager.h"
+# 185 "mcc_generated_files/pin_manager.h"
 void IOCBF7_ISR(void);
-# 217 "mcc_generated_files/pin_manager.h"
+# 208 "mcc_generated_files/pin_manager.h"
 void IOCBF7_SetInterruptHandler(void (* InterruptHandler)(void));
-# 241 "mcc_generated_files/pin_manager.h"
+# 232 "mcc_generated_files/pin_manager.h"
 extern void (*IOCBF7_InterruptHandler)(void);
-# 265 "mcc_generated_files/pin_manager.h"
+# 256 "mcc_generated_files/pin_manager.h"
 void IOCBF7_DefaultInterruptHandler(void);
 # 49 "mcc_generated_files/pin_manager.c" 2
 
@@ -4567,7 +4567,7 @@ void PIN_MANAGER_Initialize(void)
 
 
 
-    APFCON0 = 0x00;
+    APFCON0 = 0x04;
     APFCON1 = 0x00;
 
 

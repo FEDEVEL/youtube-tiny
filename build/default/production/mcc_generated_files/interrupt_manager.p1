@@ -19,9 +19,34 @@ Version 4.0 HI-TECH Software Intermediate Code
 "272 mcc_generated_files/ext_int.h
 [; ;mcc_generated_files/ext_int.h: 272: void INT_ISR(void);
 [v _INT_ISR `(v ~T0 @X0 0 ef ]
-"181 mcc_generated_files/pin_manager.h
-[; ;mcc_generated_files/pin_manager.h: 181: void PIN_MANAGER_IOC(void);
+"172 mcc_generated_files/pin_manager.h
+[; ;mcc_generated_files/pin_manager.h: 172: void PIN_MANAGER_IOC(void);
 [v _PIN_MANAGER_IOC `(v ~T0 @X0 0 ef ]
+"1455 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1829.h
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1829.h: 1455:     struct {
+[s S83 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S83 . . TMR4IE . TMR6IE CCP3IE CCP4IE ]
+"1454
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1829.h: 1454: typedef union {
+[u S82 `S83 1 ]
+[n S82 . . ]
+"1464
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1829.h: 1464: extern volatile PIE3bits_t PIE3bits __attribute__((address(0x093)));
+[v _PIE3bits `VS82 ~T0 @X0 0 e@147 ]
+"699
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1829.h: 699:     struct {
+[s S44 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S44 . . TMR4IF . TMR6IF CCP3IF CCP4IF ]
+"698
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1829.h: 698: typedef union {
+[u S43 `S44 1 ]
+[n S43 . . ]
+"708
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1829.h: 708: extern volatile PIR3bits_t PIR3bits __attribute__((address(0x013)));
+[v _PIR3bits `VS43 ~T0 @X0 0 e@19 ]
+"309 mcc_generated_files/tmr4.h
+[; ;mcc_generated_files/tmr4.h: 309: void TMR4_ISR(void);
+[v _TMR4_ISR `(v ~T0 @X0 0 ef ]
 "54 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1829.h
 [; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1829.h: 54: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -560,17 +585,52 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e $U 384  ]
 "63
-[; ;mcc_generated_files/interrupt_manager.c: 63:     else
+[; ;mcc_generated_files/interrupt_manager.c: 63:     else if(INTCONbits.PEIE == 1)
 [e :U 383 ]
+[e $ ! == -> . . _INTCONbits 0 6 `i -> 1 `i 385  ]
 "64
 [; ;mcc_generated_files/interrupt_manager.c: 64:     {
 {
+"65
+[; ;mcc_generated_files/interrupt_manager.c: 65:         if(PIE3bits.TMR4IE == 1 && PIR3bits.TMR4IF == 1)
+[e $ ! && == -> . . _PIE3bits 0 1 `i -> 1 `i == -> . . _PIR3bits 0 1 `i -> 1 `i 386  ]
 "66
-[; ;mcc_generated_files/interrupt_manager.c: 66:     }
+[; ;mcc_generated_files/interrupt_manager.c: 66:         {
+{
+"67
+[; ;mcc_generated_files/interrupt_manager.c: 67:             TMR4_ISR();
+[e ( _TMR4_ISR ..  ]
+"68
+[; ;mcc_generated_files/interrupt_manager.c: 68:         }
 }
+[e $U 387  ]
+"69
+[; ;mcc_generated_files/interrupt_manager.c: 69:         else
+[e :U 386 ]
+"70
+[; ;mcc_generated_files/interrupt_manager.c: 70:         {
+{
+"72
+[; ;mcc_generated_files/interrupt_manager.c: 72:         }
+}
+[e :U 387 ]
+"73
+[; ;mcc_generated_files/interrupt_manager.c: 73:     }
+}
+[e $U 388  ]
+"74
+[; ;mcc_generated_files/interrupt_manager.c: 74:     else
+[e :U 385 ]
+"75
+[; ;mcc_generated_files/interrupt_manager.c: 75:     {
+{
+"77
+[; ;mcc_generated_files/interrupt_manager.c: 77:     }
+}
+[e :U 388 ]
 [e :U 384 ]
 [e :U 382 ]
-"67
-[; ;mcc_generated_files/interrupt_manager.c: 67: }
+"78
+[; ;mcc_generated_files/interrupt_manager.c: 78: }
 [e :UE 380 ]
 }
